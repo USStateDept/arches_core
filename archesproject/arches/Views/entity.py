@@ -23,13 +23,16 @@ from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
 from archesproject.arches.Models.entity import Entity
 from archesproject.arches.Utils.betterJSONSerializer import JSONSerializer, JSONDeserializer
+from django.contrib.auth.decorators import login_required
 
 @csrf_exempt
+@login_required(login_url='/Arches/User/Login')
 def EntityPOST(request):
     obj = JSONDeserializer().deserialize(request.body)
     return HttpResponse(JSONSerializer().serialize(obj, ensure_ascii=False))
 
 @csrf_exempt
+@login_required(login_url='/Arches/User/Login')
 def Entities(request, entityid):
     entity = []
 
@@ -66,6 +69,7 @@ def Entities(request, entityid):
     return HttpResponse(JSONSerializer().serialize(entity, ensure_ascii=True, indent=4))
 
 @csrf_exempt
+@login_required(login_url='/Arches/User/Login')
 def EntityTypes(request, entitytypeid):
     entityschema = []
     if entitytypeid == '':

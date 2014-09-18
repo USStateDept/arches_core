@@ -36,8 +36,7 @@ def Login(request):
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
-
-        if request.POST['noajax']:
+        if request.POST.get('noajax', None):
             if user is not None:
                 if user.is_active:
                     login(request, user)

@@ -19,7 +19,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 from django.http import HttpResponse
 from archesproject.arches.Utils.betterJSONSerializer import JSONSerializer, JSONDeserializer
 from archesproject.arches.Search.search_engine_factory import SearchEngineFactory
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='/Arches/User/Login')
 def MapLayers(request, entitytypeid):
 	data = []
 	bbox = request.GET['bbox']

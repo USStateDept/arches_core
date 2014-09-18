@@ -116,6 +116,7 @@ Arches.config.Tpls = {
             return values.primaryname;
         },
         isUserLoggedin: function () {
+            //changing this to is_staff and logged
             loggedIn = false;
             if (Arches.config.Tpls.appData.user && Arches.config.Tpls.appData.user.is_active) {
                 loggedIn = true;

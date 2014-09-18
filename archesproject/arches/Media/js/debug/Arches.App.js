@@ -129,8 +129,10 @@ Ext.define('Arches.app', {
     },
 
     setUser: function (user) {
-        this.data.user = user;
-        this.appPanel.setUser(user);
+        if (user.hasOwnProperty("is_staff") && user.is_staff){
+            this.data.user = user;
+            this.appPanel.setUser(user);    
+        }
     }
 });
 

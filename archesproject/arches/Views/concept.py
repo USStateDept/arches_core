@@ -21,8 +21,10 @@ from django.views.decorators.csrf import csrf_exempt
 import archesproject.arches.Models.models as archesmodels
 from archesproject.arches.Search.search_engine_factory import SearchEngineFactory
 from archesproject.arches.Utils.betterJSONSerializer import JSONSerializer, JSONDeserializer
+from django.contrib.auth.decorators import login_required
 
 @csrf_exempt
+@login_required(login_url='/Arches/User/Login')
 def Concept(request, ids):
     full_graph = request.GET.get('full_graph', 'true') == 'true'
     exclude_subconcepts = request.GET.get('exclude_subconcepts', 'false') == 'true'

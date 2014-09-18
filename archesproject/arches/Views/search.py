@@ -21,13 +21,16 @@ from django.conf import settings
 from django.contrib.gis.geos import GEOSGeometry
 from archesproject.arches.Utils.betterJSONSerializer import JSONSerializer
 from archesproject.arches.Search.search_engine_factory import SearchEngineFactory
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='/Arches/User/Login')
 def Search(request):
     se = SearchEngineFactory().create()
     searchString = request.GET['q']
     search_results = _normalize_spatial_results_to_wkt(se.search(searchString.lower(), index='entity', type='', search_field='strings', use_phrase=True))
     return HttpResponse(JSONSerializer().serialize(search_results, ensure_ascii=False))
 
+@login_required(login_url='/Arches/User/Login')
 def search_terms(request):
     se = SearchEngineFactory().create()
     searchString = request.GET['q']

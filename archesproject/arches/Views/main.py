@@ -44,6 +44,7 @@ def index(request):
             return render_to_response('index.htm', {'scripts': (settings.STATIC_URL + file for file in JsFiles(debug=True))},
                 context_instance=RequestContext(request))
 
+@login_required(login_url='/Arches/User/Login')
 def splash(request):
     #lang = request.GET.get('lang') if request.GET.get('lang') != '' and request.GET.get('lang') != None else settings.LANGUAGE_CODE
     if settings.DEBUG == False:
