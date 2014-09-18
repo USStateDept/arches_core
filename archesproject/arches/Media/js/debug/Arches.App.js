@@ -84,7 +84,7 @@ Ext.define('Arches.app', {
             },
             'deactivate': function () {
                 this.appPanel.mapPanel.hideAllPopups();
-                this.appPanel.appHeader.loginWindow.hide();
+                //this.appPanel.appHeader.loginWindow.hide();
             },
             scope: this
         });
