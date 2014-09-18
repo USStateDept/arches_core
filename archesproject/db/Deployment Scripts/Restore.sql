@@ -3,6 +3,7 @@
 \i 'C:/inetpub/arches_staging/archesproject/db/Deployment Scripts/Install/batch_index.sql'
 \i 'C:/inetpub/arches_staging/archesproject/db/Deployment Scripts/Install/django_authentication.sql'
 \i 'C:/inetpub/arches_staging/archesproject/db/Deployment Scripts/Install/isstring.sql'
+\i 'C:/inetpub/arches_staging/archesproject/db/Deployment Scripts/Install/PostDeployment.sql'
 \i 'C:/inetpub/arches_staging/archesproject/db/Deployment Scripts/Install/postgis_backward_compatibility.sql'
 \i 'C:/inetpub/arches_staging/archesproject/db/Deployment Scripts/Install/uuid-ossp.sql'
 
