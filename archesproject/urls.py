@@ -21,6 +21,7 @@ from django.conf.urls import patterns, include, url
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.utils import importlib
+from django.views.generic import RedirectView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -36,7 +37,9 @@ for package_name in settings.INSTALLED_PACKAGES:
         urlpatterns += package_patterns
 
 urlpatterns += patterns('',
+
     url(r'^Arches/$', 'archesproject.arches.Views.main.index'),
+    (r'^(?i)$', RedirectView.as_view(url='/Arches/')),
     url(r'^Arches/index.htm', 'archesproject.arches.Views.main.index'),
     url(r'^Arches/JsGzip', 'archesproject.arches.Views.main.JsGzip'),
     
