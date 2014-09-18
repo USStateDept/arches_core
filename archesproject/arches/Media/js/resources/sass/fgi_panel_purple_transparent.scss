@@ -1,0 +1,71 @@
+//Main Color
+$panel-purpletrans-body-background-color: #0e3b69;  //This is the "overall" color of the panel    values: #515871
+$panel-purpletrans-body-border-color: darken($panel-purpletrans-body-background-color, 5%);  //Make the body border the same as background
+
+//Panel border styles
+$panel-purpletrans-border-width: 0px;  //Border around outside of panel
+$panel-purpletrans-border-color: darken($panel-purpletrans-body-background-color, 25%);  //Color doesn't matter if border width = 0
+$panel-purpletrans-border-radius: 0px; //Rounds panel corners
+
+//Header Font Styles
+$panel-purpletrans-header-font-size: 11px;
+$panel-purpletrans-header-font-family: Arial, Tahoma, Verdana, sans-serif;
+$panel-purpletrans-header-color: #FFFFFF;   //values: #333333, #FFFFFF, #FF9900
+
+//Header Styles
+$panel-purpletrans-header-background-color: $panel-purpletrans-body-background-color;  //Makes sure that the header shares the body color.
+$panel-purpletrans-header-inner-border-color: $panel-purpletrans-body-background-color; //Makes sure that the header shares the body color.
+$panel-purpletrans-header-background-gradient: null;  //Ensures that header fades into background, values: null, matte, 
+$panel-purpletrans-header-border-color: $panel-purpletrans-body-background-color;  //Color for header "underline"
+
+
+//Panel Body Border Styles
+$panel-purpletrans-body-border-width: 0px;  
+
+
+$MainText_color: #FFFFFF;
+
+
+@include extjs-panel-ui(
+    'fgi_panel_purple_transparent',
+
+    $ui-base-color: $panel_base_color,
+
+    $ui-border-color: $panel-purpletrans-border-color,
+    $ui-border-radius: $panel-purpletrans-border-radius,
+    $ui-border-width: $panel-purpletrans-border-width,
+
+    $ui-header-color: $panel-purpletrans-header-color,
+    $ui-header-font-family: $panel-purpletrans-header-font-family,
+    $ui-header-font-size: $panel-purpletrans-header-font-size,
+    //$ui-header-font-weight: $panel-purpletrans-header-font-weight,
+
+    $ui-header-border-color: $panel-purpletrans-header-border-color,
+    $ui-header-background-color: $panel-purpletrans-header-background-color,
+    $ui-header-background-gradient: $panel-purpletrans-header-background-gradient,
+    $ui-header-inner-border-color: $panel-purpletrans-header-inner-border-color,
+
+    $ui-body-color: #D0D0D0,
+    $ui-body-border-color: $panel-purpletrans-body-border-color,
+    $ui-body-border-width: $panel-purpletrans-body-border-width,
+    $ui-body-border-style: solid,
+    $ui-body-background-color: $panel-purpletrans-body-background-color,  
+    $ui-body-font-size: 12px,
+    $ui-body-font-weight: null
+
+  
+);
+
+
+//add a drop shadow, transparency for whole panel
+.x-panel-fgi_panel_purple_transparent {
+    //panel transparency
+    opacity:0.75;
+    filter:alpha(opacity=75); /* For IE8 and earlier */
+  
+}
+
+.x-panel-body-fgi_panel_purple {
+    //set text color, alignment, padding
+    color: $MainText_color; //color:rgb(255,0,0);
+}

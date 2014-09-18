@@ -1,0 +1,29 @@
+syntax: glob
+
+*.pyc
+*.orig
+*.scssc
+*.sublime*
+settings_local.py
+arches/Media/js/min/1231_11_Arches.min.js
+arches/Media/js/min/1231_11_Arches.min.js.gz
+arches/Media/js/i18n/*
+db/Deployment Scripts/Backup.bat
+db/Deployment Scripts/Restore.bat
+db/Deployment Scripts/Restore.sh
+db/Deployment Scripts/Restore.sql
+db/Deployment Scripts/DatabaseCleanup.sql
+virtualenv/ENV
+install/psycopg2
+install/django
+arches/Media/js/debug/config/app.js
+arches/Media/js/resources/css/*.css
+docs/_build
+arches/Search/engines/elasticsearch-0.90.3/data/*
+arches/Search/engines/elasticsearch-0.90.3/logs/*
+*.sln
+*.suo
+*.idea
+.DS_Store
+Thumbs.db
+.vagrant

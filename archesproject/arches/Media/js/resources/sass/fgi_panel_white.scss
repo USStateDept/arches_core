@@ -1,0 +1,62 @@
+//Main Color
+$panel-white-body-background-color: #FFFFFD;  //This is the "overall" color of the panel #FFFFFD/#F7F7F7/#F4F0EE
+$panel-white-body-border-color: #d0d0d0;  //Make the body border the same as background
+
+//Panel border styles
+$panel-white-border-width: 1px;  //Border around outside of panel
+$panel-white-border-color: #d0d0d0;  //Color doesn't matter if border width = 0
+$panel-white-border-radius: 2px; //Rounds panel corners
+
+//Header Font Styles
+$panel-white-header-font-size: 14px;
+$panel-white-header-font-family: Arial, Tahoma, Verdana, sans-serif;
+$panel-white-header-color: #333333;
+
+//Header Styles
+$panel-white-header-background-color: $panel-white-body-background-color;  //Makes sure that the header shares the body color.
+$panel-white-header-inner-border-color: $panel-white-body-background-color; //Makes sure that the header shares the body color.
+$panel-white-header-background-gradient: null;  //Ensures that header fades into background, values: null, matte, 
+$panel-white-header-border-color: $panel-white-body-background-color;  //Color for header "underline"  values: #D0D0D0
+
+
+//Panel Body Border Styles
+$panel-white-body-border-width: 0px;  
+
+
+$MainText_color: #212B56;
+
+
+@include extjs-panel-ui(
+    'fgi_panel_white',
+
+    $ui-base-color: $panel_base_color,
+
+    $ui-border-color: $panel-white-border-color,
+    $ui-border-radius: $panel-white-border-radius,
+    $ui-border-width: $panel-white-border-width,
+
+    $ui-header-color: $panel-white-header-color,
+    $ui-header-font-family: $panel-white-header-font-family,
+    $ui-header-font-size: $panel-white-header-font-size,
+    //$ui-header-font-weight: $panel-white-header-font-weight,
+
+    $ui-header-border-color: $panel-white-header-border-color,
+    $ui-header-background-color: $panel-white-header-background-color,
+    $ui-header-background-gradient: $panel-white-header-background-gradient,
+    $ui-header-inner-border-color: $panel-white-header-inner-border-color,
+
+    $ui-body-color: #D0D0D0,
+    $ui-body-border-color: $panel-white-body-border-color,
+    $ui-body-border-width: $panel-white-body-border-width,
+    $ui-body-border-style: solid,
+    $ui-body-background-color: $panel-white-body-background-color,  
+    $ui-body-font-size: 12px,
+    $ui-body-font-weight: null
+
+  
+);
+
+//add a drop shadow, transparency for panel base
+.x-panel-body-fgi_panel_white {
+    color: $MainText_color; //color:rgb(255,0,0);  
+}

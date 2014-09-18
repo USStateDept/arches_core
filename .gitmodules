@@ -1,0 +1,4 @@
+[submodule "archesproject/packages/cds"]
+	path = archesproject/packages/cds
+	url = https://github.com/USStateDept/arches_state.git
+	branch = staging

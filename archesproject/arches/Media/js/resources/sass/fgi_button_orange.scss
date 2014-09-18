@@ -1,0 +1,253 @@
+//Button Color Style
+$button_orange_base_color: #E4B40C;
+$button_orange_color_over: lighten($button_orange_base_color, 5%);
+$button_orange_color_focus: lighten($button_orange_base_color, 5%);
+$button_orange_color_pressed: lighten($button_orange_base_color, 10%);
+$button_orange_color_disabled: #B3B3B3;  //values: #8A8A8A, #A9A9A9
+
+
+//Button Color Gradients
+$button_orange_background_gradient: null; //options are 'glossy','matte', 'matte-reversed', 'recessed', 'glossy-toolbar', $button-default-background-gradient
+$button_orange_background_gradient_over: null;
+$button_orange_background_gradient_focus: null;
+$button_orange_background_gradient_pressed: null;
+$button_orange_background_gradient_disabled: null;
+
+
+//Button border Styles
+$button_orange_border_radius: 4px; 
+$button_orange_border_width: 1px;
+$button_orange_border_color: #f6741e;  //darken($button_orange_base_color, 20%), #dbdbdb, #7F7F7F
+$button_orange_border_color_over: darken($button_orange_border_color, 20%);
+$button_orange_border_color_focus: darken($button_orange_border_color, 20%);
+$button_orange_border_color_pressed: darken($button_orange_border_color, 40%);
+$button_orange_border_color_disabled: darken($button_orange_color_disabled, 50%);
+
+
+//Fonts
+$button_orange_font_family: Arial, Tahoma, Verdana, sans-serif;
+$button_orange_font_family_over: $button_orange_font_family;
+$button_orange_font_family_focus: $button_orange_font_family;
+$button_orange_font_family_pressed: $button_orange_font_family;
+$button_orange_font_family_disabled: $button_orange_font_family;
+
+
+//Font Color and Size Styles
+$button_orange_font_color: #565656;
+$button_orange_font_color_disabled: #525252;  //values: darken($button_orange_font_color, 10%)
+$button_orange_font_color_mouseover: $button_orange_font_color;
+$button_orange_font_color_pressed: $button_orange_font_color;
+$button_orange_font_size: 14px;
+$button_orange_font_size_over: $button_orange_font_size + 0;
+$button_orange_font_size_pressed: $button_orange_font_size_over;
+$button_orange_font_size_focus: $button_orange_font_size_over;
+
+
+@include extjs-button-ui(
+    'fgi_button_orange-small',
+
+    $border-radius: $button_orange_border-radius,
+    $border-width: $button_orange_border-width,
+ 
+    $border-color: $button_orange_border_color,
+    $border-color-over: $button_orange_border_color_over,
+    $border-color-focus: $button_orange_border_color_focus,
+    $border-color-pressed: $button_orange_border_color_pressed,
+    $border-color-disabled: $button_orange_border_color_disabled,
+ 
+    $padding: 0px,//$button-small-padding,
+    $text-padding: 0px,//$button-small-text-padding,
+ 
+    $background-color: $button_orange_base_color,
+    $background-color-over: $button_orange_color_over,
+    $background-color-focus: $button_orange_color_focus,
+    $background-color-pressed: $button_orange_color_pressed,
+    $background-color-disabled: $button_orange_color_disabled,
+ 
+    $background-gradient: $button_orange_background_gradient,
+    $background-gradient-over: $button_orange_background_gradient_over,
+    $background-gradient-focus: $button_orange_background_gradient_focus,
+    $background-gradient-pressed: $button_orange_background_gradient_pressed,
+    $background-gradient-disabled: $button_orange_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_orange_font_color,
+    $color-over: $button_orange_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_orange_font_color_pressed,
+    $color-disabled: $button_orange_font_color_disabled,
+ 
+    $font-size: $button_orange_font_size,
+    $font-size-over: $button_orange_font_size_over,
+    $font-size-focus: $button_orange_font_size_focus,
+    $font-size-pressed: $button_orange_font_size_pressed,
+    $font-size-disabled: $button-small-font-size-disabled,
+ 
+    $font-weight: bold,
+    $font-weight-over: bold,//$button-small-font-weight-over,
+    $font-weight-focus: bold,//$button-small-font-weight-focus,
+    $font-weight-pressed: bold,//$button-small-font-weight-pressed,
+    $font-weight-disabled: bold,
+ 
+    $font-family: $button_orange_font_family,
+    $font-family-over: $button_orange_font_family_over,
+    $font-family-focus: $button_orange_font_family_focus,
+    $font-family-pressed: $button_orange_font_family_pressed,
+    $font-family-disabled: $button_orange_font_family_disabled,
+ 
+    $icon-size: $button-small-icon-size
+);
+
+@include extjs-button-ui(
+    'fgi_button_orange-medium',
+
+    $border-radius: $button_orange_border-radius,
+    $border-width: $button_orange_border-width,
+ 
+    $border-color: $button_orange_border_color,
+    $border-color-over: $button_orange_border_color_over,
+    $border-color-focus: $button_orange_border_color_focus,
+    $border-color-pressed: $button_orange_border_color_pressed,
+    $border-color-disabled: $button_orange_border_color_disabled,
+ 
+    $padding: $button-medium-padding,
+    $text-padding: $button-medium-text-padding,
+ 
+    $background-color: $button_orange_base_color,
+    $background-color-over: $button_orange_color_over,
+    $background-color-focus: $button_orange_color_focus,
+    $background-color-pressed: $button_orange_color_pressed,
+    $background-color-disabled: $button_orange_color_disabled,
+ 
+    $background-gradient: $button_orange_background_gradient,
+    $background-gradient-over: $button_orange_background_gradient_over,
+    $background-gradient-focus: $button_orange_background_gradient_focus,
+    $background-gradient-pressed: $button_orange_background_gradient_pressed,
+    $background-gradient-disabled: $button_orange_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_orange_font_color,
+    $color-over: $button_orange_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_orange_font_color_pressed,
+    $color-disabled: $button_orange_font_color_disabled,
+ 
+    $font-size: $button_orange_font_size,
+    $font-size-over: $button_orange_font_size_over,
+    $font-size-focus: $button_orange_font_size_focus,
+    $font-size-pressed: $button_orange_font_size_pressed,
+    $font-size-disabled: $button-small-font-size-disabled,
+ 
+    $font-weight: bold,
+    $font-weight-over: bold,//$button-small-font-weight-over,
+    $font-weight-focus: bold,//$button-small-font-weight-focus,
+    $font-weight-pressed: bold,//$button-small-font-weight-pressed,
+    $font-weight-disabled: bold,
+ 
+    $font-family: $button_orange_font_family,
+    $font-family-over: $button_orange_font_family_over,
+    $font-family-focus: $button_orange_font_family_focus,
+    $font-family-pressed: $button_orange_font_family_pressed,
+    $font-family-disabled: $button_orange_font_family_disabled,
+ 
+    $icon-size: $button-medium-icon-size
+);
+
+@include extjs-button-ui(
+    'fgi_button_orange-large',
+
+    $border-radius: $button_orange_border-radius,
+    $border-width: $button_orange_border-width,
+ 
+    $border-color: $button_orange_border_color,
+    $border-color-over: $button_orange_border_color_over,
+    $border-color-focus: $button_orange_border_color_focus,
+    $border-color-pressed: $button_orange_border_color_pressed,
+    $border-color-disabled: $button_orange_border_color_disabled,
+ 
+    $padding: $button-large-padding,
+    $text-padding: $button-large-text-padding,
+ 
+    $background-color: $button_orange_base_color,
+    $background-color-over: $button_orange_color_over,
+    $background-color-focus: $button_orange_color_focus,
+    $background-color-pressed: $button_orange_color_pressed,
+    $background-color-disabled: $button_orange_color_disabled,
+ 
+    $background-gradient: $button_orange_background_gradient,
+    $background-gradient-over: $button_orange_background_gradient_over,
+    $background-gradient-focus: $button_orange_background_gradient_focus,
+    $background-gradient-pressed: $button_orange_background_gradient_pressed,
+    $background-gradient-disabled: $button_orange_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_orange_font_color,
+    $color-over: $button_orange_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_orange_font_color_pressed,
+    $color-disabled: $button_orange_font_color_disabled,
+ 
+    $font-size: $button_orange_font_size,
+    $font-size-over: $button_orange_font_size_over,
+    $font-size-focus: $button_orange_font_size_focus,
+    $font-size-pressed: $button_orange_font_size_pressed,
+    $font-size-disabled: $button-large-font-size-disabled,
+ 
+    $font-weight: bold,
+    $font-weight-over: bold,//$button-small-font-weight-over,
+    $font-weight-focus: bold,//$button-small-font-weight-focus,
+    $font-weight-pressed: bold,//$button-small-font-weight-pressed,
+    $font-weight-disabled: bold,
+ 
+    $font-family: $button_orange_font_family,
+    $font-family-over: $button_orange_font_family_over,
+    $font-family-focus: $button_orange_font_family_focus,
+    $font-family-pressed: $button_orange_font_family_pressed,
+    $font-family-disabled: $button_orange_font_family_disabled,
+ 
+    $icon-size: $button-large-icon-size
+);
+
+
+
+//Button Selector on mouseover
+.x-btn-fgi_button_orange-small:hover {
+    //set shadow param's
+    @include box-shadow(0 0 4px rgba(0, 0, 0, .25));
+
+}
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_orange-small-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}
+
+//Button Selector on mouseover
+.x-btn-fgi_button_orange-medium:hover {
+    //set shadow param's
+    @include box-shadow(0 0 4px rgba(0, 0, 0, .25));
+
+}
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_orange-medium-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}
+
+//Button Selector on mouseover
+.x-btn-fgi_button_orange-large:hover {
+    //set shadow param's
+    @include box-shadow(0 0 4px rgba(0, 0, 0, .25));
+
+}
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_orange-large-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}

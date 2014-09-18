@@ -1,0 +1,214 @@
+[2014-07-24 14:35:43,406][INFO ][cluster.metadata         ] [Beast] [concept] creating index, cause [api], shards [5]/[1], mappings []
+[2014-07-24 14:35:43,725][INFO ][cluster.metadata         ] [Beast] [concept] create_mapping [all]
+[2014-07-24 14:35:43,752][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [all]
+[2014-07-24 14:36:06,203][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [all] (dynamic)
+[2014-07-24 14:38:17,412][WARN ][index.mapper             ] [Beast] [concept] Type [GEOMETRY QUALIFIER.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:17,511][WARN ][index.mapper             ] [Beast] [concept] Type [GEOMETRY QUALIFIER.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:17,511][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [GEOMETRY QUALIFIER.E55] (dynamic)
+[2014-07-24 14:38:24,177][WARN ][index.mapper             ] [Beast] [concept] Type [ADMINISTRATIVE SUBDIVISION.E48] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:29,903][WARN ][index.mapper             ] [Beast] [concept] Type [ADMINISTRATIVE SUBDIVISION.E48] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:29,903][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ADMINISTRATIVE SUBDIVISION.E48] (dynamic)
+[2014-07-24 14:38:30,008][WARN ][index.mapper             ] [Beast] [concept] Type [NAME TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,032][WARN ][index.mapper             ] [Beast] [concept] Type [NAME TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,033][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [NAME TYPE.E55] (dynamic)
+[2014-07-24 14:38:30,202][WARN ][index.mapper             ] [Beast] [concept] Type [CULTURAL PERIOD.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,222][WARN ][index.mapper             ] [Beast] [concept] Type [CULTURAL PERIOD.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,222][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [CULTURAL PERIOD.E55] (dynamic)
+[2014-07-24 14:38:30,305][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHAEOLOGICAL TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,317][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHAEOLOGICAL TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,319][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ARCHAEOLOGICAL TECHNIQUE.E55] (dynamic)
+[2014-07-24 14:38:30,389][WARN ][index.mapper             ] [Beast] [concept] Type [MEASUREMENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,414][WARN ][index.mapper             ] [Beast] [concept] Type [MEASUREMENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,414][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [MEASUREMENT TYPE.E55] (dynamic)
+[2014-07-24 14:38:30,449][WARN ][index.mapper             ] [Beast] [concept] Type [ABSOLUTE DATING METHOD.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,573][WARN ][index.mapper             ] [Beast] [concept] Type [ABSOLUTE DATING METHOD.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,573][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ABSOLUTE DATING METHOD.E55] (dynamic)
+[2014-07-24 14:38:30,575][WARN ][index.mapper             ] [Beast] [concept] Type [SCIENTIFIC DATING METHOD.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,598][WARN ][index.mapper             ] [Beast] [concept] Type [SCIENTIFIC DATING METHOD.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,598][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [SCIENTIFIC DATING METHOD.E55] (dynamic)
+[2014-07-24 14:38:30,650][WARN ][index.mapper             ] [Beast] [concept] Type [CONDITION TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,669][WARN ][index.mapper             ] [Beast] [concept] Type [CONDITION TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:30,669][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [CONDITION TYPE.E55] (dynamic)
+[2014-07-24 14:38:33,393][WARN ][index.mapper             ] [Beast] [concept] Type [MATERIAL.E57] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:33,436][WARN ][index.mapper             ] [Beast] [concept] Type [MATERIAL.E57] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:33,436][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [MATERIAL.E57] (dynamic)
+[2014-07-24 14:38:33,507][WARN ][index.mapper             ] [Beast] [concept] Type [SUBJECT.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:33,520][WARN ][index.mapper             ] [Beast] [concept] Type [SUBJECT.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:33,521][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [SUBJECT.E55] (dynamic)
+[2014-07-24 14:38:34,331][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT) TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:34,352][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT) TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:34,353][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ARCHAEOLOGICAL HERITAGE (ARTIFACT) TYPE.E55] (dynamic)
+[2014-07-24 14:38:34,434][WARN ][index.mapper             ] [Beast] [concept] Type [UNIT OF MEASUREMENT.E58] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:34,457][WARN ][index.mapper             ] [Beast] [concept] Type [UNIT OF MEASUREMENT.E58] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:34,457][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [UNIT OF MEASUREMENT.E58] (dynamic)
+[2014-07-24 14:38:34,542][WARN ][index.mapper             ] [Beast] [concept] Type [EXTERNAL XREF TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:34,554][WARN ][index.mapper             ] [Beast] [concept] Type [EXTERNAL XREF TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:34,558][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [EXTERNAL XREF TYPE.E55] (dynamic)
+[2014-07-24 14:38:34,625][WARN ][index.mapper             ] [Beast] [concept] Type [ADMINISTRATIVE SUBDIVISION TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:34,636][WARN ][index.mapper             ] [Beast] [concept] Type [ADMINISTRATIVE SUBDIVISION TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:34,637][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ADMINISTRATIVE SUBDIVISION TYPE.E55] (dynamic)
+[2014-07-24 14:38:37,348][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHAEOLOGICAL COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:37,414][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHAEOLOGICAL COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:37,414][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ARCHAEOLOGICAL COMPONENT TYPE.E55] (dynamic)
+[2014-07-24 14:38:37,864][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHAEOLOGICAL HERITAGE (SITE) TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:37,936][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHAEOLOGICAL HERITAGE (SITE) TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:37,937][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ARCHAEOLOGICAL HERITAGE (SITE) TYPE.E55] (dynamic)
+[2014-07-24 14:38:38,131][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHITECTURAL TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:38,153][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHITECTURAL TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:38,154][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ARCHITECTURAL TECHNIQUE.E55] (dynamic)
+[2014-07-24 14:38:38,896][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHITECTURAL HERITAGE TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:38,930][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHITECTURAL HERITAGE TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:38,930][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ARCHITECTURAL HERITAGE TYPE.E55] (dynamic)
+[2014-07-24 14:38:40,894][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHITECTURAL COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:40,936][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHITECTURAL COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:40,936][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ARCHITECTURAL COMPONENT TYPE.E55] (dynamic)
+[2014-07-24 14:38:40,982][WARN ][index.mapper             ] [Beast] [concept] Type [DESIGNATION AND PROTECTION TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,000][WARN ][index.mapper             ] [Beast] [concept] Type [DESIGNATION AND PROTECTION TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,001][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [DESIGNATION AND PROTECTION TYPE.E55] (dynamic)
+[2014-07-24 14:38:41,188][WARN ][index.mapper             ] [Beast] [concept] Type [DOCUMENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,208][WARN ][index.mapper             ] [Beast] [concept] Type [DOCUMENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,209][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [DOCUMENT TYPE.E55] (dynamic)
+[2014-07-24 14:38:41,237][WARN ][index.mapper             ] [Beast] [concept] Type [DOCUMENT COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,247][WARN ][index.mapper             ] [Beast] [concept] Type [DOCUMENT COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,247][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [DOCUMENT COMPONENT TYPE.E55] (dynamic)
+[2014-07-24 14:38:41,364][WARN ][index.mapper             ] [Beast] [concept] Type [DOCUMENT TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,376][WARN ][index.mapper             ] [Beast] [concept] Type [DOCUMENT TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,376][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [DOCUMENT TECHNIQUE.E55] (dynamic)
+[2014-07-24 14:38:41,616][WARN ][index.mapper             ] [Beast] [concept] Type [HISTORICAL EVENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,643][WARN ][index.mapper             ] [Beast] [concept] Type [HISTORICAL EVENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,644][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [HISTORICAL EVENT TYPE.E55] (dynamic)
+[2014-07-24 14:38:41,757][WARN ][index.mapper             ] [Beast] [concept] Type [IMAGE TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,785][WARN ][index.mapper             ] [Beast] [concept] Type [IMAGE TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,785][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [IMAGE TECHNIQUE.E55] (dynamic)
+[2014-07-24 14:38:41,945][WARN ][index.mapper             ] [Beast] [concept] Type [IMAGE TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,971][WARN ][index.mapper             ] [Beast] [concept] Type [IMAGE TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:41,972][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [IMAGE TYPE.E55] (dynamic)
+[2014-07-24 14:38:42,098][WARN ][index.mapper             ] [Beast] [concept] Type [IMAGE MATERIAL.E57] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,306][WARN ][index.mapper             ] [Beast] [concept] Type [IMAGE MATERIAL.E57] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,306][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [IMAGE MATERIAL.E57] (dynamic)
+[2014-07-24 14:38:42,332][WARN ][index.mapper             ] [Beast] [concept] Type [INVESTIGATION TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,347][WARN ][index.mapper             ] [Beast] [concept] Type [INVESTIGATION TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,347][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [INVESTIGATION TYPE.E55] (dynamic)
+[2014-07-24 14:38:42,416][WARN ][index.mapper             ] [Beast] [concept] Type [LANDSCAPE HERITAGE TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,573][WARN ][index.mapper             ] [Beast] [concept] Type [LANDSCAPE HERITAGE TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,574][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [LANDSCAPE HERITAGE TYPE.E55] (dynamic)
+[2014-07-24 14:38:42,636][WARN ][index.mapper             ] [Beast] [concept] Type [LANDSCAPE COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,650][WARN ][index.mapper             ] [Beast] [concept] Type [LANDSCAPE COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,653][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [LANDSCAPE COMPONENT TYPE.E55] (dynamic)
+[2014-07-24 14:38:42,672][WARN ][index.mapper             ] [Beast] [concept] Type [LANDSCAPE TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,703][WARN ][index.mapper             ] [Beast] [concept] Type [LANDSCAPE TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,703][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [LANDSCAPE TECHNIQUE.E55] (dynamic)
+[2014-07-24 14:38:42,884][WARN ][index.mapper             ] [Beast] [concept] Type [MANAGEMENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,899][WARN ][index.mapper             ] [Beast] [concept] Type [MANAGEMENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:42,899][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [MANAGEMENT TYPE.E55] (dynamic)
+[2014-07-24 14:38:45,352][WARN ][index.mapper             ] [Beast] [concept] Type [MARITIME HERITAGE TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:45,440][WARN ][index.mapper             ] [Beast] [concept] Type [MARITIME HERITAGE TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:45,440][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [MARITIME HERITAGE TYPE.E55] (dynamic)
+[2014-07-24 14:38:45,593][WARN ][index.mapper             ] [Beast] [concept] Type [MARITIME TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:45,631][WARN ][index.mapper             ] [Beast] [concept] Type [MARITIME TECHNIQUE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:45,632][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [MARITIME TECHNIQUE.E55] (dynamic)
+[2014-07-24 14:38:46,051][WARN ][index.mapper             ] [Beast] [concept] Type [MARITIME COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,085][WARN ][index.mapper             ] [Beast] [concept] Type [MARITIME COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,085][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [MARITIME COMPONENT TYPE.E55] (dynamic)
+[2014-07-24 14:38:46,122][WARN ][index.mapper             ] [Beast] [concept] Type [ORGANIZATION TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,152][WARN ][index.mapper             ] [Beast] [concept] Type [ORGANIZATION TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,152][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ORGANIZATION TYPE.E55] (dynamic)
+[2014-07-24 14:38:46,280][WARN ][index.mapper             ] [Beast] [concept] Type [TITLE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,310][WARN ][index.mapper             ] [Beast] [concept] Type [TITLE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,310][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [TITLE.E55] (dynamic)
+[2014-07-24 14:38:46,477][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHES RESOURCE CROSS-REFERENCE RELATIONSHIP TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,498][WARN ][index.mapper             ] [Beast] [concept] Type [ARCHES RESOURCE CROSS-REFERENCE RELATIONSHIP TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,499][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [ARCHES RESOURCE CROSS-REFERENCE RELATIONSHIP TYPE.E55] (dynamic)
+[2014-07-24 14:38:46,614][WARN ][index.mapper             ] [Beast] [concept] Type [TYPE OF DESIGNATION OR PROTECTION.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,687][WARN ][index.mapper             ] [Beast] [concept] Type [TYPE OF DESIGNATION OR PROTECTION.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,688][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [TYPE OF DESIGNATION OR PROTECTION.E55] (dynamic)
+[2014-07-24 14:38:46,800][WARN ][index.mapper             ] [Beast] [concept] Type [IMAGE COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,846][WARN ][index.mapper             ] [Beast] [concept] Type [IMAGE COMPONENT TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:46,847][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [IMAGE COMPONENT TYPE.E55] (dynamic)
+[2014-07-24 14:38:46,953][WARN ][index.mapper             ] [Beast] [concept] Type [PERSON TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:47,001][WARN ][index.mapper             ] [Beast] [concept] Type [PERSON TYPE.E55] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:47,001][INFO ][cluster.metadata         ] [Beast] [concept] update_mapping [PERSON TYPE.E55] (dynamic)
+[2014-07-24 14:38:48,044][INFO ][cluster.metadata         ] [Beast] [maplayers] creating index, cause [auto(index api)], shards [5]/[1], mappings []
+[2014-07-24 14:38:48,359][WARN ][index.mapper             ] [Beast] [maplayers] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:48,375][WARN ][index.mapper             ] [Beast] [maplayers] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:48,376][INFO ][cluster.metadata         ] [Beast] [maplayers] update_mapping [ARCHITECTURAL HERITAGE.E18] (dynamic)
+[2014-07-24 14:38:48,423][INFO ][cluster.metadata         ] [Beast] [entity] creating index, cause [api], shards [5]/[1], mappings []
+[2014-07-24 14:38:48,459][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:48,459][INFO ][cluster.metadata         ] [Beast] [entity] create_mapping [ARCHITECTURAL HERITAGE.E18]
+[2014-07-24 14:38:48,476][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:48,476][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHITECTURAL HERITAGE.E18]
+[2014-07-24 14:38:48,510][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:48,510][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHITECTURAL HERITAGE.E18]
+[2014-07-24 14:38:48,556][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:48,556][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHITECTURAL HERITAGE.E18]
+[2014-07-24 14:38:49,019][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:49,019][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHITECTURAL HERITAGE.E18] (dynamic)
+[2014-07-24 14:38:49,045][INFO ][cluster.metadata         ] [Beast] [term] creating index, cause [api], shards [5]/[1], mappings []
+[2014-07-24 14:38:49,105][INFO ][cluster.metadata         ] [Beast] [term] create_mapping [value]
+[2014-07-24 14:38:49,994][WARN ][index.mapper             ] [Beast] [maplayers] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:50,073][WARN ][index.mapper             ] [Beast] [maplayers] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:50,073][INFO ][cluster.metadata         ] [Beast] [maplayers] update_mapping [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] (dynamic)
+[2014-07-24 14:38:50,079][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:50,079][INFO ][cluster.metadata         ] [Beast] [entity] create_mapping [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18]
+[2014-07-24 14:38:50,087][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:50,087][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18]
+[2014-07-24 14:38:50,104][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:50,105][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18]
+[2014-07-24 14:38:50,112][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:50,112][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18]
+[2014-07-24 14:38:50,200][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:50,200][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] (dynamic)
+[2014-07-24 14:38:52,066][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:52,070][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:52,074][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:52,077][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:52,249][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:52,249][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHITECTURAL HERITAGE.E18] (dynamic)
+[2014-07-24 14:38:52,294][INFO ][cluster.metadata         ] [Beast] [term] update_mapping [value] (dynamic)
+[2014-07-24 14:38:53,980][WARN ][index.mapper             ] [Beast] [maplayers] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:53,989][WARN ][index.mapper             ] [Beast] [maplayers] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:53,989][INFO ][cluster.metadata         ] [Beast] [maplayers] update_mapping [ARCHAEOLOGICAL HERITAGE (SITE).E27] (dynamic)
+[2014-07-24 14:38:54,610][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:54,611][INFO ][cluster.metadata         ] [Beast] [entity] create_mapping [ARCHAEOLOGICAL HERITAGE (SITE).E27]
+[2014-07-24 14:38:54,621][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:54,621][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHAEOLOGICAL HERITAGE (SITE).E27]
+[2014-07-24 14:38:54,628][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:54,628][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHAEOLOGICAL HERITAGE (SITE).E27]
+[2014-07-24 14:38:54,635][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:54,635][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHAEOLOGICAL HERITAGE (SITE).E27]
+[2014-07-24 14:38:54,693][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:54,693][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHAEOLOGICAL HERITAGE (SITE).E27] (dynamic)
+[2014-07-24 14:38:55,286][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:55,289][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:55,293][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:55,297][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:57,319][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:57,323][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:57,326][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:57,330][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:57,401][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:57,401][INFO ][cluster.metadata         ] [Beast] [entity] update_mapping [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] (dynamic)
+[2014-07-24 14:38:58,142][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:58,146][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:58,149][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:58,153][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:58,937][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:58,941][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:58,951][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:38:58,955][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (ARTIFACT).E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:39:00,672][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:39:00,675][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:39:00,679][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:39:00,682][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:39:01,737][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:39:01,740][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:39:01,744][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 14:39:01,747][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHITECTURAL HERITAGE.E18] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 19:21:03,790][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 19:21:03,795][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 19:21:03,799][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 19:21:03,803][WARN ][index.mapper             ] [Beast] [entity] Type [ARCHAEOLOGICAL HERITAGE (SITE).E27] contains a '.', it is recommended not to include it within a type name
+[2014-07-24 21:40:58,899][INFO ][node                     ] [Beast] stopping ...
+[2014-07-24 21:40:58,999][INFO ][node                     ] [Beast] stopped
+[2014-07-24 21:40:59,000][INFO ][node                     ] [Beast] closing ...
+[2014-07-24 21:40:59,009][INFO ][node                     ] [Beast] closed

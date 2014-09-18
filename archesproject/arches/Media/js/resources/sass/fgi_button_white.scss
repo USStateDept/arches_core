@@ -1,0 +1,258 @@
+//Button Color Style
+$button_white_base_color: #d8d8d8;  //values: #F4F4F4, #F6F6F6, #FDFDFD, #edeceb, #F2F2F2, #FAFAFA, #F0F0F0, #F5F5F5
+$button_white_color_over: #FAFAFA;  //values: #FFFFFD
+$button_white_color_focus: #FAFAFA;
+$button_white_color_pressed: #FAFAFA;
+$button_white_color_disabled: #EEEEEE;  //values: #8A8A8A, #B3B3B3
+
+
+//Button Color Gradients
+$button_white_background_gradient: null; //options are 'glossy','matte', 'matte-reversed', 'recessed', 'glossy-toolbar', $button-default-background-gradient
+$button_white_background_gradient_over: null;
+$button_white_background_gradient_focus: null;
+$button_white_background_gradient_pressed: null;
+$button_white_background_gradient_disabled: null;
+
+
+//Button border Styles
+$button_white_border_radius: 3px; 
+$button_white_border_width: 1px;
+$button_white_border_color: darken($button_white_base_color, 20%); //#dbdbdb, #7F7F7F
+$button_white_border_color_over: darken($button_white_color_over, 20%);
+$button_white_border_color_focus: #7F7F7F;
+$button_white_border_color_pressed: #7F7F7F;
+$button_white_border_color_disabled: #afaca9;  //values: #afaca9, darken($button_white_color_disabled, 50%)
+
+
+//Fonts
+$button_white_font_family: Arial, Tahoma, Verdana, sans-serif;
+$button_white_font_family_over: $button_white_font_family;
+$button_white_font_family_focus: $button_white_font_family;
+$button_white_font_family_pressed: $button_white_font_family;
+$button_white_font_family_disabled: $button_white_font_family;
+
+
+//Font Color and Size Styles
+$button_white_font_color: #7F7F7F;
+$button_white_font_color_disabled: #7F7F7F;  //values: 525252
+$button_white_font_color_mouseover: darken($button_white_font_color, 20%);
+$button_white_font_color_pressed: darken($button_white_font_color, 20%);
+$button_white_font_size: 14px;
+$button_white_font_size_over: $button_white_font_size + 0;
+$button_white_font_size_pressed: $button_white_font_size_over;
+$button_white_font_size_focus: $button_white_font_size_over;
+
+
+@include extjs-button-ui(
+    'fgi_button_white-small',
+
+    $border-radius: $button_white_border-radius,
+    $border-width: $button_white_border-width,
+ 
+    $border-color: $button_white_border_color,
+    $border-color-over: $button_white_border_color_over,
+    $border-color-focus: $button_white_border_color_focus,
+    $border-color-pressed: $button_white_border_color_pressed,
+    $border-color-disabled: $button_white_border_color_disabled,
+ 
+    $padding: 0px,//$button-small-padding,
+    $text-padding: 0px,//$button-small-text-padding,
+ 
+    $background-color: $button_white_base_color,
+    $background-color-over: $button_white_color_over,
+    $background-color-focus: $button_white_color_focus,
+    $background-color-pressed: $button_white_color_pressed,
+    $background-color-disabled: $button_white_color_disabled,
+ 
+    $background-gradient: $button_white_background_gradient,
+    $background-gradient-over: $button_white_background_gradient_over,
+    $background-gradient-focus: $button_white_background_gradient_focus,
+    $background-gradient-pressed: $button_white_background_gradient_pressed,
+    $background-gradient-disabled: $button_white_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_white_font_color,
+    $color-over: $button_white_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_white_font_color_pressed,
+    $color-disabled: $button_white_font_color_disabled,
+ 
+    $font-size: $button_white_font_size,
+    $font-size-over: $button_white_font_size_over,
+    $font-size-focus: $button_white_font_size_focus,
+    $font-size-pressed: $button_white_font_size_pressed,
+    $font-size-disabled: $button_white_font_size,
+ 
+    $font-weight: $button-small-font-weight,
+    $font-weight-over: 'bold',//$button-small-font-weight-over,
+    $font-weight-focus: 'bold',//$button-small-font-weight-focus,
+    $font-weight-pressed: 'bold',//$button-small-font-weight-pressed,
+    $font-weight-disabled: $button-small-font-weight-disabled,
+ 
+    $font-family: $button_white_font_family,
+    $font-family-over: $button_white_font_family_over,
+    $font-family-focus: $button_white_font_family_focus,
+    $font-family-pressed: $button_white_font_family_pressed,
+    $font-family-disabled: $button_white_font_family_disabled,
+ 
+    $icon-size: $button-small-icon-size
+);
+
+@include extjs-button-ui(
+    'fgi_button_white-medium',
+
+    $border-radius: $button_white_border-radius,
+    $border-width: $button_white_border-width,
+ 
+    $border-color: $button_white_border_color,
+    $border-color-over: $button_white_border_color_over,
+    $border-color-focus: $button_white_border_color_focus,
+    $border-color-pressed: $button_white_border_color_pressed,
+    $border-color-disabled: $button_white_border_color_disabled,
+ 
+    $padding: $button-medium-padding,
+    $text-padding: $button-medium-text-padding,
+ 
+    $background-color: $button_white_base_color,
+    $background-color-over: $button_white_color_over,
+    $background-color-focus: $button_white_color_focus,
+    $background-color-pressed: $button_white_color_pressed,
+    $background-color-disabled: $button_white_color_disabled,
+ 
+    $background-gradient: $button_white_background_gradient,
+    $background-gradient-over: $button_white_background_gradient_over,
+    $background-gradient-focus: $button_white_background_gradient_focus,
+    $background-gradient-pressed: $button_white_background_gradient_pressed,
+    $background-gradient-disabled: $button_white_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_white_font_color,
+    $color-over: $button_white_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_white_font_color_pressed,
+    $color-disabled: $button_white_font_color_disabled,
+ 
+    $font-size: $button_white_font_size,
+    $font-size-over: $button_white_font_size_over,
+    $font-size-focus: $button_white_font_size_focus,
+    $font-size-pressed: $button_white_font_size_pressed,
+    $font-size-disabled: $button_white_font_size,
+ 
+    $font-weight: $button-medium-font-weight,
+    $font-weight-over: 'bold',//$button-small-font-weight-over,
+    $font-weight-focus: 'bold',//$button-small-font-weight-focus,
+    $font-weight-pressed: 'bold',//$button-small-font-weight-pressed,
+    $font-weight-disabled: $button-small-font-weight-disabled,
+ 
+    $font-family: $button_white_font_family,
+    $font-family-over: $button_white_font_family_over,
+    $font-family-focus: $button_white_font_family_focus,
+    $font-family-pressed: $button_white_font_family_pressed,
+    $font-family-disabled: $button_white_font_family_disabled,
+ 
+    $icon-size: $button-medium-icon-size
+);
+
+@include extjs-button-ui(
+    'fgi_button_white-large',
+
+    $border-radius: $button_white_border-radius,
+    $border-width: $button_white_border-width,
+ 
+    $border-color: $button_white_border_color,
+    $border-color-over: $button_white_border_color_over,
+    $border-color-focus: $button_white_border_color_focus,
+    $border-color-pressed: $button_white_border_color_pressed,
+    $border-color-disabled: $button_white_border_color_disabled,
+ 
+    $padding: $button-large-padding,
+    $text-padding: $button-large-text-padding,
+ 
+    $background-color: $button_white_base_color,
+    $background-color-over: $button_white_color_over,
+    $background-color-focus: $button_white_color_focus,
+    $background-color-pressed: $button_white_color_pressed,
+    $background-color-disabled: $button_white_color_disabled,
+ 
+    $background-gradient: $button_white_background_gradient,
+    $background-gradient-over: $button_white_background_gradient_over,
+    $background-gradient-focus: $button_white_background_gradient_focus,
+    $background-gradient-pressed: $button_white_background_gradient_pressed,
+    $background-gradient-disabled: $button_white_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_white_font_color,
+    $color-over: $button_white_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_white_font_color_pressed,
+    $color-disabled: $button_white_font_color_disabled,
+ 
+    $font-size: $button_white_font_size,
+    $font-size-over: $button_white_font_size_over,
+    $font-size-focus: $button_white_font_size_focus,
+    $font-size-pressed: $button_white_font_size_pressed,
+    $font-size-disabled: $button-small-font-size-disabled,
+ 
+    $font-weight: $button-large-font-weight,
+    $font-weight-over: 'bold',//$button-small-font-weight-over,
+    $font-weight-focus: 'bold',//$button-small-font-weight-focus,
+    $font-weight-pressed: 'bold',//$button-small-font-weight-pressed,
+    $font-weight-disabled: $button_white_font_size,
+ 
+    $font-family: $button_white_font_family,
+    $font-family-over: $button_white_font_family_over,
+    $font-family-focus: $button_white_font_family_focus,
+    $font-family-pressed: $button_white_font_family_pressed,
+    $font-family-disabled: $button_white_font_family_disabled,
+ 
+    $icon-size: $button-large-icon-size
+);
+
+
+
+//Button Selector on mouseover
+.x-btn-fgi_button_white-small:hover {
+    //set shadow param's
+    @include box-shadow(0 0 3px rgba(0, 0, 0, .25));
+
+}
+
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_white-small-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}
+
+//Button Selector on mouseover
+.x-btn-fgi_button_white-medium:hover {
+    //set shadow param's
+    @include box-shadow(0 0 3px rgba(0, 0, 0, .25));
+
+}
+
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_white-medium-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}
+
+//Button Selector on mouseover
+.x-btn-fgi_button_white-large:hover {
+    //set shadow param's
+    @include box-shadow(0 0 3px rgba(0, 0, 0, .25));
+
+}
+
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_white-large-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}
+
+

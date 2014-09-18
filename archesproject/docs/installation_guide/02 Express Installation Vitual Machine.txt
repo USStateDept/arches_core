@@ -1,0 +1,97 @@
+#Express Installation on a Virtual Machine
+
+Express Installation on a virtual machine allows you to quickly install and use Arches with its default settings and an example dataset from northern England, courtesy of English Heritage. If your primary goal is to test Arches to determine whether it might be a good fit for your project or organization, then this is the fastest way to get Arches running.
+
+##Before You Start
+Arches runs best with at least 2GB of RAM (but feel free to give it more!), so check to make sure that your computer has enough memory to support the installation.  
+
+Also, if you don't currently use virtual machines, you'll need to download and install an application to support the express installation.  
+
+We've designed the express installation to install Arches on a Virtual Machine (VM). Don't worry too much if you don't know what a VM is; just know that it will streamline the work needed to install Arches. And, as an added bonus, the VM will ensure that Arches can be easily started or deleted from your host computer.
+
+OK, let's begin!  
+
+### Step 1: Download the Arches VM  
+You can install Arches on a laptop, PC, or server.  The steps include downloading a Virtual Machine (VM) file (think of this as a complete computer all bundled up in a single file) and the software necessary to run the VM.
+
+Start by downloading the following Arches Virtual Machine file to your computer: 
+
+[https://s3-us-west-1.amazonaws.com/arches.v2.0.0/ArchesVM.ova](https://s3-us-west-1.amazonaws.com/arches.v2.0.0/ArchesVM.ova)
+
+It's a pretty large file (about 3 GB), so depending on the speed of your Internet connection, this might take a while.  
+
+
+### Step 2: Install VirtualBox
+VirtualBox is an open source application that runs Virtual Machines.  You will use VirtualBox to import and run the Arches VM that you downloaded in Step 1. 
+
+Navigate to [https://www.virtualbox.org](https://www.virtualbox.org); download and install VirtualBox for your OS.
+
+I>###VMWare works too!  
+I>If you already use VMWare software to run virtual machines you can skip this step and use your current VMWare product to run Arches. 
+
+
+### Step 3: Import the Arches VM
+Start VirtualBox, click "File" and then "Import Appliance".  Navigate to the folder where you downloaded the Arches VM files and click on ArchesVM.ova.  
+
+You should see the following screen:  
+
+![Arches Default Screen: Simple Search](images/VM_Import.png)  
+
+Click the "Continue" button.  VirtualBox will start the import process; you'll be presented with a summary of the VM:  
+
+![Arches Default Screen: Simple Search](images/VM_Import_review.png)  
+
+Press the "Import" button.  VirtualBox will create a new VM.  
+
+
+### Step 4: Start the Virtual Machine
+Highlight the newly created Virtual Machine in the VirtualBox Manager, then press "Start":  
+
+![Arches Default Screen: Simple Search](images/VM_Start.png)
+
+During the startup process, VirtualBox may alert you with messages about how it has configured the mouse and keyboard.  Go ahead and accept each message.
+
+
+### Step 5: Log on to the VM
+You will see the following log on screen:  
+
+![Arches Default Screen: Simple Search](images/Arches_VM.png)  
+  
+The user account is called "Arches admin".  The password is "arches".  
+
+
+### Step 6: Start the Arches Server
+Once you've logged on to the VM, you'll see 2 shortcuts on the desktop:  
+
++ Step 1: Start Arches Web Server
++ Step 2: Open Arches  
+
+
+![Arches Default Screen: Simple Search](images/VM_Start_arches_server.png)
+
+
+Double-click "Step 1" icon, and then click the "Run in Terminal" button.  Minimize the Terminal Window (Don't close it!), then double click on the "Step 2" icon.  If everything's gone right, you'll see the Arches welcome screen:  
+
+![Arches Default Screen: Simple Search](images/Arches_Search.png)  
+
+
+
+If you want to test adding or editing cultural heritage data in Arches, you'll need to sign in.  Click "Map" in the upper right corner of the screen, then click  
+
+ ![Arches Sign In](images/Arches_login.png)
+ 
+The Username and Password are both "admin" (omit the quotes when entering the username and password).  
+
+For more help in understanding the Arches app, check out the **Arches User Guide** to learn how to work with Arches.
+
+W>### Using the test data-set
+W> 
+W> All test data supplied is for experimentation in Arches only. The records 
+W> are not certified for accuracy or completeness.  
+
+
+###A note on Ubuntu
+The VM you're working with is running Ubuntu 12.04. One reason we're using Ubunutu is because of its nice user interface.  Check out [http://www.ubuntu.com/desktop](http://www.ubuntu.com/desktop) to learn more about Ubuntu and to see a quick tutorial on using the interface.  
+
+
+Congratulations, if everything's gone right you now have a fully functional version of Arches to work with.  

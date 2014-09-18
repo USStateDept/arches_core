@@ -1,0 +1,107 @@
+//Main Color
+$panel-graytrans-body-background-color: #EEEEEE;  //This is the "overall" color of the panel   some values: #D0D0D0, #F4F4F4, #F5F5F5
+$panel-graytrans-body-border-color: $panel-graytrans-body-background-color;  //Make the body border the same as background
+
+//Panel border styles
+$panel-graytrans-border-width: 0px;  //Border around outside of panel
+$panel-graytrans-border-color: #C0C0C0;  //Color doesn't matter if border width = 0
+$panel-graytrans-border-radius: 0px; //Rounds panel corners
+
+//Header Font Styles
+$panel-graytrans-header-font-size: 14px;
+$panel-graytrans-header-font-family: Arial, Tahoma, Verdana, sans-serif;
+$panel-graytrans-header-color: #666666;
+
+//Header Styles
+$panel-graytrans-header-background-color: $panel-graytrans-body-background-color;  //Makes sure that the header shares the body color.
+$panel-graytrans-header-inner-border-color: $panel-graytrans-body-background-color; //Makes sure that the header shares the body color.
+$panel-graytrans-header-background-gradient: null;  //Ensures that header fades into background, values: null, matte, 
+$panel-graytrans-header-border-color: $panel-graytrans-body-background-color;  //Color for header "underline"
+
+
+//Panel Body Border Styles
+$panel-graytrans-body-border-width: 0px;  
+
+//framed styles
+$frame-graytrans-base-color: #EEEEEE;
+
+//border
+$panel-graytrans-frame-border-radius: 2px;
+$panel-graytrans-frame-border-width: 1px;
+$panel-graytrans-frame-border-style: solid;
+$panel-graytrans-frame-padding: 4px;
+
+// UI defaults
+$panel-graytrans-frame-background-color: $frame-graytrans-base-color;
+$panel-graytrans-frame-border-color: $panel-graytrans-border-color;
+
+
+$MainText_color: #666666;
+
+
+@include extjs-panel-ui(
+    'fgi_panel_gray_transparent',
+
+    $ui-base-color: $panel_base_color,
+
+    $ui-border-color: $panel-graytrans-border-color,
+    $ui-border-radius: $panel-graytrans-border-radius,
+    $ui-border-width: $panel-graytrans-border-width,
+
+    $ui-header-color: $panel-graytrans-header-color,
+    $ui-header-font-family: $panel-graytrans-header-font-family,
+    $ui-header-font-size: $panel-graytrans-header-font-size,
+    //$ui-header-font-weight: $panel-graytrans-header-font-weight,
+
+    $ui-header-border-color: $panel-graytrans-header-border-color,
+    $ui-header-background-color: $panel-graytrans-header-background-color,
+    $ui-header-background-gradient: $panel-graytrans-header-background-gradient,
+    $ui-header-inner-border-color: $panel-graytrans-header-inner-border-color,
+
+    $ui-body-color: #D0D0D0,
+    $ui-body-border-color: $panel-graytrans-body-border-color,
+    $ui-body-border-width: $panel-graytrans-body-border-width,
+    $ui-body-border-style: solid,
+    $ui-body-background-color: $panel-graytrans-body-background-color,  
+    $ui-body-font-size: 12px,
+    $ui-body-font-weight: null
+
+  
+);
+
+@include extjs-panel-ui(
+    'fgi_panel_gray_transparent-framed',
+
+    $ui-base-color: $panel_base_color,
+    $ui-border-width: $panel-graytrans-frame-border-width,
+    $ui-border-color: $panel-graytrans-frame-border-color,
+    $ui-border-radius: $panel-graytrans-frame-border-radius,
+
+    $ui-header-color: $panel-graytrans-header-color,
+    $ui-header-font-size: $panel-graytrans-header-font-size,
+    //$ui-header-font-weight: $panel-graytrans-header-font-weight,
+    $ui-header-border-color: $panel-graytrans-frame-border-color,
+    $ui-header-background-color: $panel-graytrans-header-background-color,
+    $ui-header-background-gradient: $panel-graytrans-header-background-gradient,
+
+    $ui-body-color: #D0D0D0,
+    $ui-body-border-color: $panel-graytrans-body-border-color,
+    $ui-body-border-width: 0,
+    $ui-body-background-color: $panel-graytrans-frame-background-color
+);
+
+
+//add a drop shadow, transparency for whole panel
+.x-panel-fgi_panel_gray_transparent, .x-panel-fgi_panel_gray_transparent-framed {
+    //panel transparency
+    opacity:0.90;
+    filter:alpha(opacity=90); /* For IE8 and earlier */
+  
+}
+
+
+//add a drop shadow, transparency for panel base
+.x-panel-body-fgi_panel_gray_transparent {
+    color: $MainText_color; //color:rgb(255,0,0);
+}
+

@@ -1,0 +1,73 @@
+# What is Arches?
+
+Arches is an open-source geospatial software system for cultural heritage inventory and management, developed jointly by the [Getty Conservation Institute](http://www.getty.edu/conservation) and [World Monuments Fund](http://www.wmf.org). Arches grew out of the widespread need within the heritage field for the ability to create electronic inventories at low cost that are easy to use and access. Arches combines state-of-the-art software development with insights and perspectives of heritage professionals from around the world.
+
+The need for functional heritage inventories has grown over the last decades, together with the rise of a global awareness of the importance of heritage management. Nevertheless, inventories remain complicated to establish and maintain, and frequently rely on costly proprietary software that does not always fit the needs of the heritage field. Arches provides a common platform that is easy to use and customize, and yet one that takes advantage of the latest available technology to allow users to create and manage heritage information in all its richness and diversity.
+
+
+## The Arches System  
+Arches is designed as a modular system, and consists of two primary components: 
+
+**Arches Server.**  The Arches Server is the core of the system and provides essential services for managing cultural heritage information.  These services include implementing the CIDOC Conceptual Reference Model (CRM) ontology ([www.cidoc-crm.org](http://www.cidoc-crm.org), providing thesauri for managing culturual heritage concepts, and data storage, indexing, and query services.  
+
+The Arches Server also provides common system administration services, such as managing user accounts, assigning security roles and privileges, and managing system configuration settings.
+
+
+**Arches Data Management Packages.**  Arches Data Management Packages define cultural heritage data structures (modeled as graphs), User Interface components (e.g.: data creation/editing forms, reports, and map display), authority documents (e.g.: input files for the thesauri services provided by Arches Server), and [optionally] data input files.  
+
+### Arches Server
+The Arches Server is a stand-alone software application.  It is responsible for providing the essential data management services needed to create and maintain data inventories.  For example, Arches Server provides generic services to manage information graphs.  These services inlcude:
+
++ Core data storage services for arbitrary graph models
++ Core CIDOC CRM ontology classes and properties
++ Services to create, update, and retire data for instances of graphs
++ Services that index graph data
++ JSON services to publish graph instances
++ Generic query services
++ Thesaurus services to support creation of concepts (includeing associated labels and scope notes), as well as heirarchial and assoicative relationships between concepts
++ System administration and configuration interfaces  
+
+
+Consequently, Arches Server can be seen as a platform for hosting specific representations of cultural heritage data, which we call Arches Packages.
+
+### Arches Packages
+Arches Packages are self-contained modules that can be installed into the Arches Server.  
+
+Arches Packages consist of code modules that:  
+
++ Define the specific cultural heritage resources (defined using graph models)to be managed by Arches Server
++ Include HTML, CSS, and JavaScript code to implement client-side user interfaces (UI) including data creation/editing forms, data summary reports, and general UI for interacting with maps, defining query criteria, and navigating query results.
++ Data files to import concepts into Arches Server
++ Optional files to import pre-existing data records into Arches  
+
+Arches Packages are designed to support the creation of customized cultural heritage records and data entry workflows.  As such, Arches Packages thought of as a suite of configuration files for Arches Server.  
+
+As of the release of Arches v2.0.0, the Arches development team has created an Arches Package that implements the International Core Data Standard for Archaeological and Architectural Heritage. This is a soon-to-be finalized standard for the inventory of both archaeological and architectural heritage, which is based on the earlier Core Data Index to Historic Buildings and Monuments of the Architectural Heritage (adopted by the Council of Europe in 1992) and the Core Data Standard for Archaeological Sites and Monuments (adopted by CIDOC in 1995). 
+
+This new core data standard (CDS) for archaeology and architecture was used to create the first Arches Package (referred to herein as the "CDS Package").  It identifies the data fields for many of the graph models implemented in the CDS Package. 
+
+
+## Key features
+
+**Purpose-built**. Arches has been purpose-built for the international cultural heritage field, and can be used to inventory and document all types of immovable heritage, including buildings and other structures, cultural landscapes, heritage ensembles or districts, as well as archaeological sites.
+
+**Flexible**. The Arches Server/Package system architecture allows organizations deploying Arches to custom the contents of existing Packages or create their own customized Packages to meet their specific cultural heritage data management requirements.  
+
+**Standards-based**. Arches incorporates internationally adopted standards for heritage inventory, semantic modeling, and information technology, leading to better practices in the creation and management of heritage data and facilitating data exchange and longevity in spite of advances in technology. 
+
+## Applications
+
+Arches has been designed to serve a number of purposes fundamental to the understanding, appreciation, and management of heritage places. These include:
+
+* identification and inventory
+* research and analysis
+* monitoring and risk mapping
+* determining needs and priorities for investigation, research, conservation and management
+* planning for investigation, conservation, and management activities
+* raising awareness and promoting understanding among the public, as well as governmental authorities and decision makers
+
+## Further information
+
+Detailed background to the project, fact sheets, conference presentations, a project blog and active online community are all available at [http://www.archesproject.org](http://www.archesproject.org).
+
+

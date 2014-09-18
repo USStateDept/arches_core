@@ -1,0 +1,258 @@
+//Button Color Style
+$button_whitereverse_base_color: #2c66a2;  //values: #F4F4F4, #F6F6F6
+$button_whitereverse_color_over: #2c66a2;  //values: #FFFFFD
+$button_whitereverse_color_focus: #2c66a2;  //values: #FFFFFD
+$button_whitereverse_color_pressed: #2c66a2;  //values: #FFFFFD
+$button_whitereverse_color_disabled: transparent;  //values: #8A8A8A
+
+
+//Button Color Gradients
+$button_whitereverse_background_gradient: null; //options are 'glossy','matte', 'matte-reversed', 'recessed', 'glossy-toolbar', $button-default-background-gradient
+$button_whitereverse_background_gradient_over: null;
+$button_whitereverse_background_gradient_focus: null;
+$button_whitereverse_background_gradient_pressed: null;
+$button_whitereverse_background_gradient_disabled: null;
+
+
+//Button border Styles
+$button_whitereverse_border_radius: 5px; 
+$button_whitereverse_border_width: 1px;
+$button_whitereverse_border_color: transparent;  //darken($button_whitereverse_base_color, 20%), #dbdbdb, #7F7F7F
+$button_whitereverse_border_color_over: lighten(#2c66a2, 20%);
+$button_whitereverse_border_color_focus: darken(#2c66a2, 20%);;
+$button_whitereverse_border_color_pressed: darken(#2c66a2, 20%);;
+$button_whitereverse_border_color_disabled: transparent;
+
+
+//Fonts
+$button_whitereverse_font_family: Arial, Tahoma, Verdana, sans-serif;
+$button_whitereverse_font_family_over: $button_whitereverse_font_family;
+$button_whitereverse_font_family_focus: $button_whitereverse_font_family;
+$button_whitereverse_font_family_pressed: $button_whitereverse_font_family;
+$button_whitereverse_font_family_disabled: $button_whitereverse_font_family;
+
+
+//Font Color and Size Styles
+$button_whitereverse_font_color: #FFFFFF;
+$button_whitereverse_font_color_disabled: #FFFFFF;
+$button_whitereverse_font_color_mouseover: #FFFFFF;
+$button_whitereverse_font_color_pressed: #FFFFFF;
+$button_whitereverse_font_size: 11px;
+$button_whitereverse_font_size_over: $button_whitereverse_font_size + 0;
+$button_whitereverse_font_size_pressed: $button_whitereverse_font_size_over;
+$button_whitereverse_font_size_focus: $button_whitereverse_font_size_over;
+
+
+@include extjs-button-ui(
+    'fgi_button_white_reverse-small',
+
+    $border-radius: $button_whitereverse_border-radius,
+    $border-width: $button_whitereverse_border-width,
+ 
+    $border-color: $button_whitereverse_border_color,
+    $border-color-over: $button_whitereverse_border_color_over,
+    $border-color-focus: $button_whitereverse_border_color_focus,
+    $border-color-pressed: $button_whitereverse_border_color_pressed,
+    $border-color-disabled: $button_whitereverse_color_disabled,
+ 
+    $padding: 0px,//$button-small-padding,
+    $text-padding: 0px,//$button-small-text-padding,
+ 
+    $background-color: transparent,
+    $background-color-over: $button_whitereverse_color_over,
+    $background-color-focus: $button_whitereverse_color_focus,
+    $background-color-pressed: $button_whitereverse_color_pressed,
+    $background-color-disabled: $button_whitereverse_color_disabled,
+ 
+    $background-gradient: $button_whitereverse_background_gradient,
+    $background-gradient-over: $button_whitereverse_background_gradient_over,
+    $background-gradient-focus: $button_whitereverse_background_gradient_focus,
+    $background-gradient-pressed: $button_whitereverse_background_gradient_pressed,
+    $background-gradient-disabled: $button_whitereverse_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_whitereverse_font_color,
+    $color-over: $button_whitereverse_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_whitereverse_font_color_pressed,
+    $color-disabled: $button_whitereverse_font_color_disabled,
+ 
+    $font-size: $button_whitereverse_font_size,
+    $font-size-over: $button_whitereverse_font_size_over,
+    $font-size-focus: $button_whitereverse_font_size_focus,
+    $font-size-pressed: $button_whitereverse_font_size_pressed,
+    $font-size-disabled: $button-small-font-size-disabled,
+ 
+    $font-weight: $button-small-font-weight,
+    $font-weight-over: 'bold',//$button-small-font-weight-over,
+    $font-weight-focus: 'bold',//$button-small-font-weight-focus,
+    $font-weight-pressed: 'bold',//$button-small-font-weight-pressed,
+    $font-weight-disabled: $button-small-font-weight-disabled,
+ 
+    $font-family: $button_whitereverse_font_family,
+    $font-family-over: $button_whitereverse_font_family_over,
+    $font-family-focus: $button_whitereverse_font_family_focus,
+    $font-family-pressed: $button_whitereverse_font_family_pressed,
+    $font-family-disabled: $button_whitereverse_font_family_disabled,
+ 
+    $icon-size: $button-small-icon-size
+);
+
+
+
+@include extjs-button-ui(
+    'fgi_button_white_reverse-medium',
+
+    $border-radius: $button_whitereverse_border-radius,
+    $border-width: $button_whitereverse_border-width,
+ 
+    $border-color: $button_whitereverse_border_color,
+    $border-color-over: $button_whitereverse_border_color_over,
+    $border-color-focus: $button_whitereverse_border_color_focus,
+    $border-color-pressed: $button_whitereverse_border_color_pressed,
+    $border-color-disabled: $button_whitereverse_border_color_disabled,
+ 
+    $padding: $button-medium-padding,
+    $text-padding: $button-medium-text-padding,
+ 
+    $background-color: transparent,
+    $background-color-over: $button_whitereverse_color_over,
+    $background-color-focus: $button_whitereverse_color_focus,
+    $background-color-pressed: $button_whitereverse_color_pressed,
+    $background-color-disabled: $button_whitereverse_color_disabled,
+ 
+    $background-gradient: $button_whitereverse_background_gradient,
+    $background-gradient-over: $button_whitereverse_background_gradient_over,
+    $background-gradient-focus: $button_whitereverse_background_gradient_focus,
+    $background-gradient-pressed: $button_whitereverse_background_gradient_pressed,
+    $background-gradient-disabled: $button_whitereverse_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_whitereverse_font_color,
+    $color-over: $button_whitereverse_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_whitereverse_font_color_pressed,
+    $color-disabled: $button_whitereverse_font_color_disabled,
+ 
+    $font-size: $button_whitereverse_font_size,
+    $font-size-over: $button_whitereverse_font_size_over,
+    $font-size-focus: $button_whitereverse_font_size_focus,
+    $font-size-pressed: $button_whitereverse_font_size_pressed,
+    $font-size-disabled: $button-small-font-size-disabled,
+ 
+    $font-weight: $button-medium-font-weight,
+    $font-weight-over: 'bold',//$button-small-font-weight-over,
+    $font-weight-focus: 'bold',//$button-small-font-weight-focus,
+    $font-weight-pressed: 'bold',//$button-small-font-weight-pressed,
+    $font-weight-disabled: $button-small-font-weight-disabled,
+ 
+    $font-family: $button_whitereverse_font_family,
+    $font-family-over: $button_whitereverse_font_family_over,
+    $font-family-focus: $button_whitereverse_font_family_focus,
+    $font-family-pressed: $button_whitereverse_font_family_pressed,
+    $font-family-disabled: $button_whitereverse_font_family_disabled,
+ 
+    $icon-size: $button-medium-icon-size
+);
+
+@include extjs-button-ui(
+    'fgi_button_white_reverse-large',
+
+    $border-radius: $button_whitereverse_border-radius,
+    $border-width: $button_whitereverse_border-width,
+ 
+    $border-color: $button_whitereverse_border_color,
+    $border-color-over: $button_whitereverse_border_color_over,
+    $border-color-focus: $button_whitereverse_border_color_focus,
+    $border-color-pressed: $button_whitereverse_border_color_pressed,
+    $border-color-disabled: $button_whitereverse_border_color_disabled,
+ 
+    $padding: $button-large-padding,
+    $text-padding: $button-large-text-padding,
+ 
+    $background-color: transparent,
+    $background-color-over: $button_whitereverse_color_over,
+    $background-color-focus: $button_whitereverse_color_focus,
+    $background-color-pressed: $button_whitereverse_color_pressed,
+    $background-color-disabled: $button_whitereverse_color_disabled,
+ 
+    $background-gradient: $button_whitereverse_background_gradient,
+    $background-gradient-over: $button_whitereverse_background_gradient_over,
+    $background-gradient-focus: $button_whitereverse_background_gradient_focus,
+    $background-gradient-pressed: $button_whitereverse_background_gradient_pressed,
+    $background-gradient-disabled: $button_whitereverse_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_whitereverse_font_color,
+    $color-over: $button_whitereverse_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_whitereverse_font_color_pressed,
+    $color-disabled: $button_whitereverse_font_color_disabled,
+ 
+    $font-size: $button_whitereverse_font_size,
+    $font-size-over: $button_whitereverse_font_size_over,
+    $font-size-focus: $button_whitereverse_font_size_focus,
+    $font-size-pressed: $button_whitereverse_font_size_pressed,
+    $font-size-disabled: $button-small-font-size-disabled,
+ 
+    $font-weight: $button-large-font-weight,
+    $font-weight-over: 'bold',//$button-small-font-weight-over,
+    $font-weight-focus: 'bold',//$button-small-font-weight-focus,
+    $font-weight-pressed: 'bold',//$button-small-font-weight-pressed,
+    $font-weight-disabled: $button-small-font-weight-disabled,
+ 
+    $font-family: $button_whitereverse_font_family,
+    $font-family-over: $button_whitereverse_font_family_over,
+    $font-family-focus: $button_whitereverse_font_family_focus,
+    $font-family-pressed: $button_whitereverse_font_family_pressed,
+    $font-family-disabled: $button_whitereverse_font_family_disabled,
+ 
+    $icon-size: $button-large-icon-size
+);
+
+
+
+//Button Selector on mouseover
+.x-btn-fgi_button_white_reverse-small:hover {
+    //set shadow param's
+    @include box-shadow(0 0 3px rgba(0, 0, 0, .25));
+
+}
+
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_white_reverse-small-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}
+
+//Button Selector on mouseover
+.x-btn-fgi_button_white_reverse-medium:hover {
+    //set shadow param's
+    @include box-shadow(0 0 3px rgba(0, 0, 0, .25));
+
+}
+
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_white_reverse-medium-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}
+
+//Button Selector on mouseover
+.x-btn-fgi_button_white_reverse-large:hover {
+    //set shadow param's
+    @include box-shadow(0 0 3px rgba(0, 0, 0, .25));
+
+}
+
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_white_reverse-large-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}

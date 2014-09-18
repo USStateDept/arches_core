@@ -1,0 +1,110 @@
+//Main Color
+$panel-gray-body-background-color: #EEEEEE;  //This is the "overall" color of the panel  values: #D0D0D0
+$panel-gray-body-border-color: $panel-gray-body-background-color;  //Make the body border the same as background
+
+//Panel border styles
+$panel-gray-border-width: 0px;  //Border around outside of panel
+$panel-gray-border-color: #C0C0C0;  //Color doesn't matter if border width = 0
+$panel-gray-border-radius: 2px; //Rounds panel corners
+
+//Header Font Styles
+$panel-gray-header-font-size: 16px;
+$panel-gray-header-font-family: Arial, Tahoma, Verdana, sans-serif;
+$panel-gray-header-color: #666666;
+
+//Header Styles
+$panel-gray-header-background-color: $panel-gray-body-background-color;  //Makes sure that the header shares the body color.
+$panel-gray-header-inner-border-color: $panel-gray-body-background-color; //Makes sure that the header shares the body color.
+$panel-gray-header-background-gradient: null;  //Ensures that header fades into background, values: null, matte, 
+$panel-gray-header-border-color: #D0D0D0;  //Color for header "underline"
+
+
+//Panel Body Border Styles
+$panel-gray-body-border-width: 0px;  
+
+//framed styles
+$frame-gray-base-color: #EEEEEE;
+
+//border
+$panel-gray-frame-border-radius: 2px;
+$panel-gray-frame-border-width: 1px;
+$panel-gray-frame-border-style: solid;
+$panel-gray-frame-padding: 4px;
+
+// UI defaults
+$panel-gray-frame-background-color: $frame-gray-base-color;
+$panel-gray-frame-border-color: $panel-gray-border-color;
+
+$MainText_color: #666666;
+
+
+@include extjs-panel-ui(
+    'fgi_panel_gray',
+
+    $ui-base-color: $panel_base_color,
+
+    $ui-border-color: $panel-gray-border-color,
+    $ui-border-radius: $panel-gray-border-radius,
+    $ui-border-width: $panel-gray-border-width,
+
+    $ui-header-color: $panel-gray-header-color,
+    $ui-header-font-family: $panel-gray-header-font-family,
+    $ui-header-font-size: $panel-gray-header-font-size,
+    //$ui-header-font-weight: $panel-gray-header-font-weight,
+
+    $ui-header-border-color: $panel-gray-header-border-color,
+    $ui-header-background-color: $panel-gray-header-background-color,
+    $ui-header-background-gradient: $panel-gray-header-background-gradient,
+    $ui-header-inner-border-color: $panel-gray-header-inner-border-color,
+
+    $ui-body-color: #D0D0D0,
+    $ui-body-border-color: $panel-gray-body-border-color,
+    $ui-body-border-width: $panel-gray-body-border-width,
+    $ui-body-border-style: solid,
+    $ui-body-background-color: $panel-gray-body-background-color,  
+    $ui-body-font-size: 12px,
+    $ui-body-font-weight: null
+
+  
+);
+
+@include extjs-panel-ui(
+    'fgi_panel_gray-framed',
+
+    $ui-base-color: $panel_base_color,
+    $ui-border-width: $panel-gray-frame-border-width,
+    $ui-border-color: $panel-gray-frame-border-color,
+    $ui-border-radius: $panel-gray-frame-border-radius,
+
+    $ui-header-color: $panel-gray-header-color,
+    $ui-header-font-size: $panel-gray-header-font-size,
+    //$ui-header-font-weight: $panel-gray-header-font-weight,
+    $ui-header-border-color: $panel-gray-frame-border-color,
+    $ui-header-background-color: $panel-gray-header-background-color,
+    $ui-header-background-gradient: $panel-gray-header-background-gradient,
+
+    $ui-body-color: #D0D0D0,
+    $ui-body-border-color: $panel-gray-body-border-color,
+    $ui-body-border-width: 0,
+    $ui-body-background-color: $panel-gray-frame-background-color
+);
+
+
+//add a drop shadow, transparency for whole panel
+.x-panel-fgi_panel_gray {
+    //add a drop shadow
+    @include box-shadow(0 0 10px rgba(0, 0, 0, .7));
+
+    //panel transparency
+    opacity:1;
+    filter:alpha(opacity=100); /* For IE8 and earlier */
+  
+}
+
+
+//add a drop shadow, transparency for panel base
+.x-panel-body-fgi_panel_gray {
+    color: $MainText_color; //color:rgb(255,0,0);
+
+  
+}

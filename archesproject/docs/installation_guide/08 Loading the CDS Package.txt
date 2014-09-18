@@ -1,0 +1,51 @@
+#Loading the CDS Package
+Arches manages cultual heritage resources through the use of packages.  A package simply defines the types of resources that Arches should manage.  This can include things like the web based forms neccessary to create and edit resources, reports, and services to support search.  In reality, though, it can include almost anything the package developer wants to add into Arches.
+
+You will need to load at least one Arches Package into your Arches Server to begin managing a cultural heritage inventory.  These are these steps demonstrate the process for the CDS Package.  
+
+## Step 1: Download the CDS Package
+Get a copy of the CDS package by going to the Packages section at [http://archesproject.org/download-arches/](http://archesproject.org/download-arches/)
+
+Create a folder called "cds" in archesproject/packages and download the code to that folder (unzip if neccesary)
+
+I>you should have a directory structure simlar to this:
+
+	archesproject/
+		arches/
+		...
+		packages/
+			cds/
+				install/
+				media/
+				models/
+				...
+		settings.py
+
+## Step 2: Install the Package
+Open the archesproject/settings.py in your favorite text editor.
+
+Add an entry in the INSTALLED_PACKAGES setting coresponding to the name of the folder you created to hold the CDS Package in the packages directory (following our example above, it would look like this)
+	
+		INSTALLED_PACKAGES = (
+			# entries here should correspond to folders within the packages directory
+			'cds',
+		)
+
+I> Don't forget the trailing comma for a single entry in a python tuple
+
+Open a command window, and navigate to:  
+
+    archesproject/build  
+    
+Run the following script to install the CDS package:  
+
+    install_packages.bat (on Windows)
+    
+    OR
+    install_packages.sh (on Linux)
+
+Congatulations!  You've just completed the steps needed to install the core Arches application and CDS package on your server.  Go to the following URL and check it out!
+
+	http://localhost:8000/Arches/index.htm
+
+

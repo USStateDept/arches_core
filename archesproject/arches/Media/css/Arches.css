@@ -1,0 +1,1719 @@
+﻿/*
+ARCHES - a program developed to inventory and manage immovable cultural heritage.
+Copyright (C) 2013 J. Paul Getty Trust and World Monuments Fund
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/*------------------------------
+Arches
+--------------------------------*/
+body 
+{
+	font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+}
+
+.olImageLoadError {
+    display: none !important;
+}
+
+.x-mask 
+{
+    opacity:0.25 !important;
+    filter:alpha(opacity=25) !important; /* For IE8 and earlier */
+}
+
+.x-grid-row .x-grid-cell {
+    font: normal 13px Arial, Tahoma, Verdana, sans-serif !important;
+}
+
+.side-tab-btn .x-btn-inner {
+    line-height: 16px !important;
+    white-space: normal;
+}
+
+.splash-area {
+
+}
+
+.splash-logo {
+  background-color: transparent;
+  background-image:url('../images/Arches-logotype-redbug.png');
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.splash-header-toolbar-btn .x-btn-inner {
+    font-weight:bold;
+    font-size: 14px;    
+}
+
+.splash-header-btn .x-btn-inner {
+    font-weight:bold;
+    font-size: 16px;    
+}
+
+.header-area {
+  background-color: #356AA0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  color: white;
+}
+.header-logo {
+  background-color: transparent;
+  background-image:url('../images/redbug.png');
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.app-subheader {
+    padding-right:10px;
+    padding-top:10px;
+    background-color:#EEEEEE;
+    border-left: 6px solid #616161;
+    border-right: 6px solid #616161;
+}
+
+.no-icon-menu .x-menu-item-icon { display: none; }
+
+.reports-loading {
+    padding: 5px 10px 5px 25px;
+    background-image: url(../js/ui_frameworks/ext-4.0.2a/resources/themes/images/default/grid/loading.gif);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    cursor: wait;
+}
+
+.headerLinks {
+    font-size:11px;
+    line-height: 16px;
+}
+
+.headerLinks a:hover {
+    text-decoration:underline;
+}
+
+.login-panel .x-panel-header {
+    height: 32px; 
+}
+.login-panel .x-panel-header-text {
+    font-size:15px;
+}
+.login-panel .x-panel-header-body {
+    height: 20px;
+}
+/*------------------------------
+Hack to make this work in IE (8 at least) 
+(framed header collapses at a height of n+4)
+--------------------------------*/
+.x-ie .login-panel .x-panel-header-body {
+    height: 28px;
+}
+
+#areas-view .item{
+    padding: 3px;
+    padding-bottom: 0;
+}
+.x-quirks #areas-view .item {
+    padding-bottom: 3px;
+}
+
+#areas-view .item-wrap{
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 138px;
+    padding: 3px;
+    border: 1px solid transparent;
+}
+#areas-view .item-wrap span {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width: 86px;
+}
+#areas-view .x-item-over {
+    cursor: pointer;
+    border:1px solid #dddddd;
+    background: #efefef url(../images/over.gif) repeat-x left top;
+}
+#areas-view .x-item-selected {
+    cursor: pointer;
+    background: #eff5fb url(../images/selected.gif) no-repeat right bottom;
+    border:1px solid #99bbe8;
+}
+
+.disk {
+	background-image:url(../images/silk/icons/disk.png) !important;
+}
+
+.printer {
+	background-image:url(../images/silk/icons/printer.png) !important;
+}
+
+.email {
+	background-image:url(../images/silk/icons/email.png) !important;
+}
+
+.table {
+	background-image:url(../images/silk/icons/table.png) !important;
+}
+
+.folder {
+	background-image:url(../images/silk/icons/folder.png) !important;
+}
+
+.cog {
+	background-image:url(../images/silk/icons/cog.png) !important;
+}
+
+.extdownarrow {
+	background-image:url(../images/ext_down_arrow.png) !important;
+}
+
+.magnifier {
+	background-image:url(../images/silk/icons/magnifier.png) !important;
+}
+
+.user {
+	background-image:url(../images/silk/icons/user.png) !important;
+}
+
+.pagewhitetext {
+	background-image:url(../images/silk/icons/page_white_text.png) !important;
+}
+
+.flagblue {
+	background-image:url(../images/silk/icons/flag_blue.png) !important;
+}
+
+.film {
+	background-image:url(../images/silk/icons/film.png) !important;
+}
+
+.backarrow{
+	background-image:url(../images/silk/icons/arrow_left.png) !important;
+}
+
+.nextarrow{
+	background-image:url(../images/silk/icons/arrow_right.png) !important;
+}
+
+.mapmagnify{
+	background-image:url(../images/silk/icons/map_magnify.png) !important;
+}
+
+.mapdelete{
+	background-image:url(../images/silk/icons/map_delete.png) !important;
+}
+
+.glyph-play{
+    background-image:url(../images/glyphish/xtras/xtras-gray/49-play.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-globe{
+    background-image:url(../images/glyphish4/gray/402-globe2_small.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-document{
+    background-image:url(../images/glyphish4/gray/513-document.png) !important;
+}
+
+.glyph-document-2{
+    background-image:url(../images/glyphish4/gray/514-document-2.png) !important;
+}
+
+.glyph-globe{
+    background-image:url(../images/glyphish4/gray/402-globe2_small.png) !important;
+    background-position: 50% 50% !important;
+}
+.glyph-aerial{
+    background-image:url(../images/glyphish/icons/icons-gray/103-map.png) !important;
+    background-position: 50% 50% !important;
+    background-size: 24px;
+}
+
+.glyph-aerial-switch{
+    background-image:url(../images/glyphish/icons/icons-white/103-map.png) !important;
+    background-position: 50% 50% !important;
+    background-size: 24px;
+}
+.x-btn-pressed .glyph-aerial-switch{
+    background-image:url(../images/glyphish/icons/icons-gray/103-map.png) !important;
+}
+.x-btn-over .glyph-aerial-switch{
+    background-image:url(../images/glyphish/icons/icons-gray/103-map.png) !important;
+}
+
+
+.glyph-mountain{
+    background-image:url(../images/glyphish4/gray/385-mountain.png) !important;
+    background-position: 50% 50% !important;
+    background-size: 24px;
+}
+
+.glyph-check{
+	background-image:url(../images/glyphish/xtras/xtras-gray/17-check.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-no{
+	background-image:url(../images/glyphish/xtras/xtras-gray/46-no.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-trash{
+	background-image:url(../images/glyphish/icons/icons-gray/217-trash.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-action{
+	background-image:url(../images/glyphish/icons/icons-gray/212-action2.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-magnify{
+	background-image:url(../images/glyphish/icons/icons-gray/06-magnify.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-magnify-switch{
+    background-image:url(../images/glyphish/icons/icons-white/06-magnify.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.x-btn-pressed .glyph-magnify-switch{
+    background-image:url(../images/glyphish/icons/icons-gray/06-magnify.png) !important;
+}
+.x-btn-over .glyph-magnify-switch{
+    background-image:url(../images/glyphish/icons/icons-gray/06-magnify.png) !important;
+}
+
+.glyph-layers{
+    background-image:url(../images/glyphish4/gray/329-layers3.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-layers-switch{
+    background-image:url(../images/glyphish4/white/329-layers3.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.x-btn-pressed .glyph-layers-switch{
+    background-image:url(../images/glyphish4/gray/329-layers3.png) !important;
+}
+
+.x-btn-over .glyph-layers-switch{
+    background-image:url(../images/glyphish4/gray/329-layers3.png) !important;
+}
+
+.glyph-info{
+	background-image:url(../images/glyphish/xtras/xtras-gray/42-info.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-arroweast{
+	background-image:url(../images/glyphish/xtras/xtras-gray/02-arrow-east.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-arrowwest{
+	background-image:url(../images/glyphish/xtras/xtras-gray/09-arrow-west.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-gear{
+	background-image:url(../images/glyphish/icons/icons-gray/19-gear.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-cabinet{
+	background-image:url(../images/glyphish/icons/icons-gray/33-cabinet.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-printer{
+	background-image:url(../images/glyphish/icons/icons-gray/185-printer.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-notepad{
+    background-image:url(../images/glyphish/icons/icons-gray/179-notepad.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-map{
+	background-image:url(../images/glyphish/icons/icons-gray/103-map.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-landscape{
+	background-image:url(../images/glyphish/icons/icons-gray/121-landscape.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-landscape-switch{
+    background-image:url(../images/glyphish/icons/icons-white/121-landscape.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.x-btn-pressed .glyph-landscape-switch{
+    background-image:url(../images/glyphish/icons/icons-gray/121-landscape.png) !important;
+}
+.x-btn-over .glyph-landscape-switch{
+    background-image:url(../images/glyphish/icons/icons-gray/121-landscape.png) !important;
+}
+
+.glyph-index-cards{
+    background-image:url(../images/glyphish/icons/icons-gray/104-index-cards.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-index-cards-tab{
+    background-image:url(../images/glyphish/icons/icons-gray/104-index-cards.png) !important;
+    background-position: 50% 35% !important;
+}
+
+.glyph-wrench{
+    background-image:url(../images/glyphish/icons/icons-gray/157-wrench-2.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-wrench-tab{
+    background-image:url(../images/glyphish/icons/icons-gray/158-wrench-2.png) !important;
+    background-position: 50% 25% !important;
+}
+
+.glyph-backintime{
+    background-image:url(../images/glyphish4/gray/333-backintime.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-person{
+	background-image:url(../images/glyphish/icons/icons-gray/253-person.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-circle{
+    background-image: url(../images/glyphish/icons/icons-gray/298-circlex@2x.png) !important;
+    background-repeat: no-repeat;
+}
+
+.glyph-circle-south{
+    background-image: url(../images/glyphish/xtras/xtras-gray/32-circle-south.png) !important;
+    background-repeat: no-repeat;
+}
+
+.glyph-x{
+    background-image: url(../images/glyphish/xtras/xtras-gray/60-x.png) !important;
+    background-repeat: no-repeat;
+    background-position: 50% 50% !important;
+}
+
+.glyph-tag{
+    background-image: url(../images/glyphish/icons/icons-gray/15-tags.png) !important;
+    background-repeat: no-repeat;
+}
+.glyph-plus{
+    background-image: url(../images/glyphish/xtras/xtras-gray/50-plus.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-minus{
+    background-image: url(../images/glyphish/xtras/xtras-gray/45-minus.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-eye{
+    background-image: url(../images/glyphish/mini/mini-gray/04-eye.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-eye-xd{
+    background-image: url(../images/glyph-eye-xd.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-group{
+    background-image: url(../images/glyphish/icons/icons-gray/112-group.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-walk{
+    background-image: url(../images/glyphish/icons/icons-gray/102-walk.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-runner{
+    background-image: url(../images/glyphish/icons/icons-gray/63-runner.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-book{
+    background-image: url(../images/glyphish/icons/icons-gray/96-book.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-tower{
+    background-image: url(../images/glyphish/icons/icons-gray/131-tower.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-tower-light{
+    background-image: url(../images/glyphish/icons/icons-white/131-tower.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-tower-switch{
+    background-image: url(../images/glyphish/icons/icons-white/131-tower.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.x-btn-pressed .glyph-tower-switch{
+    background-image:url(../images/glyphish/icons/icons-gray/131-tower.png) !important;
+}
+.x-btn-over .glyph-tower-switch{
+    background-image:url(../images/glyphish/icons/icons-gray/131-tower.png) !important;
+}
+
+.glyph-signpost{
+    background-image: url(../images/glyphish/icons/icons-gray/60-signpost.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.resources-layergroup-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/131-tower.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-compass{
+    background-image: url(../images/glyphish/icons/icons-gray/71-compass.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-beaker{
+    background-image: url(../images/glyphish/icons/icons-gray/50-beaker.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-ruler{
+    background-image: url(../images/glyphish/icons/icons-gray/186-ruler.png) !important;
+}
+
+.glyph-pinetree{
+    background-image: url(../images/glyphish/icons/icons-gray/52-pine-tree.png) !important;
+}
+
+.glyph-rolodex{
+    background-image: url(../images/glyphish/icons/icons-gray/152-rolodex.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-bank{
+    background-image: url(../images/glyphish/icons/icons-gray/190-bank.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-receipt{
+    background-image: url(../images/glyphish/icons/icons-gray/162-receipt.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-shuffle{
+    background-image: url(../images/glyphish/icons/icons-gray/05-shuffle.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-line-chart{
+    background-image: url(../images/glyphish/icons/icons-gray/16-line-chart.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-flag{
+    background-image: url(../images/glyphish/icons/icons-gray/59-flag.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-key{
+    background-image: url(../images/glyphish/icons/icons-gray/30-key.png) !important;
+}
+
+.glyph-shield{
+    background-image: url(../images/glyphish/icons/icons-gray/295-shield.png) !important;
+}
+
+.glyph-dashboard{
+    background-image: url(../images/glyphish/icons/icons-gray/81-dashboard-2.png) !important;
+    background-position: 50% 50% !important;
+}
+
+.glyph-dashboard-tab{
+    background-image: url(../images/glyphish/icons/icons-gray/83-calendar-small.png) !important;
+    background-position: 50% 20% !important;
+}
+
+.glyph-check-white{
+	background-image:url(../images/glyphish/xtras/xtras-white/17-check.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-no-white{
+	background-image:url(../images/glyphish/xtras/xtras-white/46-no.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-trash-white{
+	background-image:url(../images/glyphish/icons/icons-white/217-trash.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-action-white{
+	background-image:url(../images/glyphish/icons/icons-white/212-action2.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-magnify-white{
+	background-image:url(../images/glyphish/icons/icons-white/06-magnify.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-add-point{
+    background-image:url(../images/glyphish/xtras/xtras-gray/47-o.png) !important;
+    background-position: 50% 50% !important;
+}
+.glyph-add-line{
+    background-image:url(../images/glyphish/icons/icons-gray/122-stats.png) !important;
+    background-position: 50% 50% !important;
+}
+.glyph-add-polygon{
+    background-image:url(../images/glyphish/icons/icons-gray/272-windows.png) !important;
+    background-position: 50% 50% !important;
+}
+.glyph-info-white{
+	background-image:url(../images/glyphish/xtras/xtras-white/42-info.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-arroweast-white{
+	background-image:url(../images/glyphish/xtras/xtras-white/02-arrow-east.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-arrowwest-white{
+	background-image:url(../images/glyphish/xtras/xtras-white/09-arrow-west.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-gear-white{
+	background-image:url(../images/glyphish/icons/icons-white/19-gear.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-cabinet-white{
+	background-image:url(../images/glyphish/icons/icons-white/33-cabinet.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-printer-white{
+	background-image:url(../images/glyphish/icons/icons-white/185-printer.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-map-white{
+	background-image:url(../images/glyphish/icons/icons-white/103-map.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-landscape-white{
+	background-image:url(../images/glyphish/icons/icons-white/121-landscape.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-person-white{
+	background-image:url(../images/glyphish/icons/icons-white/253-person.png) !important;
+	background-position: 50% 50% !important;
+}
+
+.glyph-circle-white{
+    background-image: url(../images/glyphish/icons/icons-white/298-circlex@2x.png) !important;
+    background-repeat: no-repeat;
+}
+
+.glyph-tag-white{
+    background-image: url(../images/glyphish/icons/icons-white/15-tags.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-plus-white{
+    background-image: url(../images/glyphish/xtras/xtras-white/50-plus.png) !important;
+	background-position: 50% 50% !important;
+}
+.glyph-minus-white{
+    background-image: url(../images/glyphish/xtras/xtras-white/45-minus.png) !important;
+	background-position: 50% 50% !important;
+}
+.icon-center {
+    width: auto !important;
+    background-position:center !important;
+}
+.icon-small{
+    background-size: 16px 16px;
+}
+
+.x-action-col-cell img { 
+    margin: 0px 0px 0px 0px; 
+    height: 24px;
+    width: 24px;
+    background-size: 22px auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.x-grid-cell-inner {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+a.header-nav-link:link  {
+    color:#D9D9D9; 
+    text-decoration:none; 
+}
+
+a.header-nav-link:visited {
+    color:#D9D9D9; 
+    text-decoration:none; 
+}
+
+a.header-nav-link.current-selection:link  {
+    color:White; 
+    text-decoration:none;
+    cursor: default;
+}
+
+a.header-nav-link.current-selection:visited {
+    color:White; 
+    text-decoration:none; 
+    cursor: default;
+}
+
+a.header-nav-link:hover {
+    color:#c3daf9; 
+    text-decoration:none; 
+}
+
+a.header-nav-link:active {
+    color:#c3daf9; 
+    text-decoration:none; 
+}
+
+.legend-info-header {
+    background-color: #D2D2D2; 
+    color: #666666; 
+    font-size: 16px;
+    padding: 5px;
+}
+
+.legend-info-container {
+    padding-right: 6px;
+}
+
+.layer-list-name {
+    font-size: 16px;
+    color: #656565;
+}
+
+.layer-on {
+    color: #2B32D6;
+}
+
+.layer-off {
+    color: #9C9C9C;
+}
+
+.nextarrow_legend{
+    background-repeat: no-repeat;
+    width: 19px !important;
+    height: 16px !important;
+    cursor: pointer;
+    margin-top: 18px !important;
+    margin-left: 6px !important;
+}
+
+.layervisibilitylink {
+    color: #5C6484;
+    text-decoration: none;
+    font-size:11px;
+}
+
+.removelayerlink {
+    color: #5C6484;
+    text-decoration: none;
+    font-size:11px;
+}
+
+
+.layerinfolink {
+    color: #5C6484;
+    text-decoration: none;
+    font-size:11px;
+}
+
+.workflow-anchor {
+    background-image: url('../images/anchor-up.png'); 
+    background-position:100% 0;
+    background-repeat:no-repeat;
+}
+
+/*------------------------------
+Legend icon classes
+--------------------------------*/
+.legend-icon-wrap {
+    height: 48px;
+    width: 34px;
+    background-color: #DBDBDB;
+    padding-top: 8px;
+    padding-left: 1px;
+}
+
+.temple{
+	background-image:url(../images/legend_icons/temple.png) !important;
+	width: 32px;
+	height: 32px;
+}
+
+.temple_off{
+	background-image:url(../images/legend_icons/temple_off.png) !important;
+	width: 32px;
+	height: 32px;
+}
+
+.basemap-list-name {
+    font-size: 14px;
+    line-height: 18px;
+    color: #9C9C9C;
+    padding-top:14px;
+}
+
+.x-boundlist-selected .basemap-list-name { 
+    color: #2B32D6;
+}
+
+.images-view .x-panel-body{
+    background: white;
+    font: 11px Arial, Helvetica, sans-serif;
+    border: 1px solid #808080;
+}
+.images-view .thumb{
+    padding: 3px;
+    padding-bottom: 0;
+    height: 80px;
+    width: 100px;
+}
+
+.x-quirks #images-view .thumb {
+    padding-bottom: 3px;
+}
+
+.images-view .thumb img{
+
+}
+
+.images-view .info-thumb{
+    padding-top: 36px;
+    height: 90px;
+    width: 113px;
+    display: table-cell; 
+    vertical-align: middle;
+    text-align: center;
+    background-position: 50% 14px !important;
+    background-repeat: no-repeat;
+}
+
+.x-quirks #images-view .info-thumb {
+    padding-bottom: 3px;
+}
+
+.images-view .info-thumb img{
+
+}
+.images-view .thumb-wrap{
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    padding: 5px;
+    cursor: pointer;
+}
+.images-view .thumb-wrap span {
+    
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+.images-view .x-item-over{
+    border:1px solid #dddddd;
+    background: #efefef url(../images/over.gif) repeat-x left top;
+    padding: 4px;
+}
+
+.images-view .x-item-selected{
+    background: #eff5fb url(../images/selected.gif) no-repeat right bottom;
+    border:1px solid #99bbe8;
+    padding: 4px;
+}
+.images-view .x-item-selected .thumb{
+    background:transparent;
+}
+
+.images-view .x-item-selected .info-thumb{
+    background:transparent;
+}
+
+.images-view .loading-indicator {
+    font-size:11px;
+    background-image:url('../ui_frameworks/ext-4.0.2a/resources/themes/images/default/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left:20px;
+    margin:10px;
+}
+
+.x-view-selector {
+    position:absolute;
+    left:0;
+    top:0;
+    width:0;
+    border:1px dotted;
+    opacity: .5;
+    -moz-opacity: .5;
+    filter:alpha(opacity=50);
+    zoom:1;
+    background-color:#c3daf9;
+    border-color:#3399bb;
+}.ext-strict .ext-ie .x-tree .x-panel-bwrap{
+    position:relative;
+    overflow:hidden;
+}
+
+.entity-workflow-title {
+    padding: 4px 0px 0px 10px;
+    font-size: 20px;
+}
+
+.entity-workflow-subtitle {
+    font-size: 11px;
+}
+
+.entity-workflow-nextsign {
+    padding: 10px 5px 10px 10px;
+    font-size: 16px;
+    text-align: right;
+}
+
+.info-themes-header {
+    padding:5px; 
+}
+
+.info-themes-header .label {
+    color:#5D5D5D;
+    font-size:16px;
+}
+
+.info-themes-header .entityname {
+    font-weight:bold; 
+    font-size:16px;
+}
+
+.info-themes-header .breadcrumbs {
+    font-size:14px;
+}
+
+.info-themes-header .history {
+    color: #808080;
+    font-size: 12px;
+}
+
+
+/*------------------------------
+Form classes
+--------------------------------*/
+.form{
+    padding: 5px;
+}
+
+.form .headerwrapper{
+    padding-bottom: 8px;
+}
+
+.form .header { 
+    font-size:18px;
+    line-height:22px;
+}
+
+.form .subheader
+{
+    font-size: 12px;
+    font-style: italic;
+    color: #777777;
+    line-height: 14px;
+    padding-top: 6px;
+}
+
+
+/*Google Layer copyright offsets*/
+#map .olLayerGoogleCopyright {
+    padding-bottom: 40px;
+}
+#map .olLayerGooglePoweredBy {
+    padding-bottom: 40px;
+}
+
+
+/* Popup Styling */
+
+.popup-anchor {
+    background-image: url('../images/anchor.png'); 
+    background-position:50% 0, 0 0;
+    background-repeat:no-repeat;
+}
+
+.hover-popup {
+    background-color:white;
+    border: 1px solid #99BCE8;
+    padding:5px;
+}
+
+.hover-popup .vessel-name {
+    padding-bottom: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #356AA0;
+}
+
+.hover-popup .vessel-detail {
+    font-weight: bold;
+    color: #808080;
+}
+
+.click-popup {
+    background-color:white;
+    border: 1px solid #99BCE8;
+}
+
+.click-popup .vessel-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #356AA0;
+    background: #EEEEEE;
+    padding:5px;
+}
+
+.click-popup .popup-tools {
+    color: #356AA0;
+    background: #EEEEEE;
+    padding:5px;
+}
+
+.click-popup .popup-tools a:link{
+    color: #356AA0;
+    text-decoration: none;
+}
+.click-popup .popup-tools a:visited{
+    color: #356AA0;
+    text-decoration: none;
+}
+.click-popup .popup-tools a:hover{
+    color: #5d98cf;
+    text-decoration: none;
+}
+
+.click-popup .vessel-detail-area {
+    padding:5px;
+    height: 65px;
+}
+
+.click-popup .vessel-detail {
+    font-weight: bold;
+    color: #808080;
+}
+
+.entity-tools a {
+    text-decoration: none;
+    color: #2B92D6;
+}
+
+/*------------------------------
+Search dropdown
+--------------------------------*/
+.search-dd-even {
+    background-color: #e6e6e6;
+} 
+
+.search-dd-odd {
+    background-color: #ffffff;
+} 
+
+.search-dd-icon {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    float: left;
+    margin-right: 5px;
+    height: 35px;
+    width: 35px;   
+} 
+
+.searchHighlight{
+    font-weight: bold;
+    background-color: #ffffb7;
+}
+.olControlScaleBar {
+    bottom: 10px;
+    left: 10px;
+    font-family: sans-serif;
+    color: #000;
+}
+
+.olControlScaleBarBar {
+    height: 2px;
+    top: 14px;
+    background: #FFFFFF;
+}
+
+.olControlScaleBarBarAlt {
+    height: 2px;
+    top: 14px;
+    background: #FFFFFF;
+}
+
+.olControlScaleBarMarkerMajor {
+    height: 2px;
+    width: 1px;
+    top: 14px;
+    background: #FFFFFF;
+}
+
+.olControlScaleBarMarkerMinor {
+    height: 2px;
+    width: 1px;
+    top: 14px;
+    background: #FFFFFF;
+}
+
+.olControlScaleBarNumbersBox {
+    width: 40px;
+    height: 13px;
+    top: 21px;
+    font-size: 0.7em;
+}
+
+.olControlScaleBarLabelBox {
+    top: -2px;
+    height: 15px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    font-size: 0.7em;
+    font-variant: small-caps;
+}
+
+.olControlScaleBarLabelBoxSingleLine {
+    height: 15px;
+    width: 45px;
+    top: 5px;
+    left: 10px;
+    font-size: 11px;
+}
+/*------------------------------
+Reports
+--------------------------------*/
+.report{
+    padding: 10px;
+}
+
+.reportSection{
+    padding: 10px 25px 10px 25px;
+    color: #808080;
+}
+
+.sectionHeader{
+    color: #404040;
+    font-size: 15px;
+}
+
+.sectionSubHeader{
+    color: #606060;
+    font-size: 14px;
+}
+
+.sectionKey {
+    color: #808080;
+    margin-left: 10px;
+}
+
+.sectionValue {
+    display: inline;
+}
+
+.sectionValueList {
+    display: block;
+    padding-left: 10px;
+}
+
+.sectionMinorValue {
+    font-size: 11px;
+}
+
+.summarySectionExpand {
+    font-size: 11px;
+}
+
+.report .x-grid{
+    padding:0px 10px 0px 10px; 
+    margin: 5px 0px 10px 0px;
+}
+
+.report .x-grid .x-panel-body{
+    border-color:#808080;
+}
+
+.report .x-grid .x-panel-docked-top{
+    border-width: 1px 1px 0px 1px; 
+    border-color: #808080;
+}
+
+.report .x-grid .x-panel-docked-top .x-panel-body{
+    color: #404040;
+    font-size:14px;
+}
+
+.report .expandableTextArea{
+    margin: 5px 10px 15px 10px;
+}
+
+.report .x-grid-header-ct{
+    border-color: #808080 !important;
+    color: #606060 !important;
+}
+
+.report .x-column-header-text{
+    font-size: 12px !important;
+    color: #606060;
+}
+
+.report .x-grid-cell-inner{
+    font-size: 11px !important;
+    color: rgb(0, 0, 139);
+}
+
+.report .x-column-header-inner{
+    background-image: none;
+    background-color: rgb(218, 236, 250);
+}
+
+.reportMapContainer{
+    padding: 4px 10px 10px 10px;
+    background-color: #eeeeee;
+    margin: 4px 0px 10px 0px;
+}
+
+.reportMap{
+    width: 250px;
+    height: 250px;
+}
+
+.mapTitle{
+    color: gray;
+    padding-bottom: 4px;
+}
+
+.gridNote{
+    font-size: 10px; 
+    padding: 0 15px 20px;
+}
+
+.image-thumb-wrap { 
+    float: left;
+    display: block; 
+    position: relative;
+    margin: 3px;
+    border: 3px solid #808080;
+}
+
+.image-thumb-wrap.clear {
+    clear: right;
+}
+
+.image-thumb-wrap.item-hover { 
+    margin: 3px;
+    border: 3px solid #404040;
+}
+
+.image-thumb-wrap.item-selected { 
+    margin: 3px;
+    border: 3px solid rgb(0, 0, 139);
+}
+
+/*------------------------------
+Printed Reports
+--------------------------------*/
+.print-report-table {
+    text-align: left;
+    width: 700px;
+    border-collapse:collapse;
+    font-size: 10px;
+    color: #808080;
+    margin-left: 10px;
+}
+
+.print-report-table th{
+    text-align: left;
+    font-size: 11px;
+    background-color: #eeeeee;
+}
+
+/*layer group icons*/
+.assets-layergroup-icon {
+    background-image: url(../images/glyphish/icons/icons-gray/131-tower.png) !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat;
+}
+
+.externalservices-layergroup-icon {
+    background-image: url(../images/glyphish/icons/icons-gray/05-shuffle.png) !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat;
+}
+
+
+/*resource group icons*/
+.documents-resourcegroup-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/96-book.png) !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat;
+}
+
+.activities-resourcegroup-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/63-runner.png) !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat;
+}
+
+.heritageassets-resourcegroup-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/131-tower.png) !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat;
+}
+
+.actors-resourcegroup-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/112-group.png) !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat;
+}
+
+/*information theme icons*/
+.locations-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/07-map-marker.png) !important;
+}
+
+.actors-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/112-group.png) !important;
+}
+
+.materials-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/52-pine-tree.png) !important;
+}
+
+.descriptions-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/179-notepad.png) !important;
+}
+
+.classificationanddating-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/104-index-cards.png) !important;
+}
+
+.relatedactors-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/112-group.png) !important;
+}
+
+.relatedactivities-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/63-runner.png) !important;
+}
+
+.relatedheritageresources-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/131-tower.png) !important;
+}
+
+.conditions-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/16-line-chart.png) !important;
+}
+
+.externalreferences-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/05-shuffle.png) !important;
+}
+
+.names-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/15-tags.png) !important;
+}
+
+.relateddocuments-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/96-book.png) !important;
+}
+
+.measurements-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/186-ruler.png) !important;
+}
+
+.relatedresources-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/645-link.png) !important;
+}
+
+.relatedresources-informationtheme-icon-small{
+    background-image: url(../images/glyphish/icons/icons-gray/645-link-small.png) !important;
+}
+
+.subject-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/30-key.png) !important;
+}
+
+.designation-informationtheme-icon{
+    background-image: url(../images/glyphish/icons/icons-gray/295-shield.png) !important;
+}
+
+.group-filter-header{
+    padding: 8px;
+    font-size: 18px;
+    color: #575757;
+    border-bottom: 1px solid #C9C9C9;
+    background-color: white;
+}
+
+.side-panel-btn .x-btn-icon {
+    margin-top: 7px;
+}
+
+.side-panel-btn .x-btn-inner {
+    font-size: 12px;
+}
+
+.advsearch-filter-link {
+    color: #7e8043;
+    text-decoration: none;
+}
+
+.expanded.advsearch-filter-link {
+    color: #424d21;
+    font-weight: bold;
+}
+
+.adv-search-view .x-panel-body{
+    background: white;
+    font: 11px Arial, Helvetica, sans-serif;
+    border: 1px solid #808080;
+}
+
+.adv-search-view .adv-result{
+    width: 292px;
+    height: 184px;
+    display: table-cell; 
+    background-position: 50% 14px !important;
+    background-repeat: no-repeat;
+    color: #7e8043;
+    line-height: 15px;
+    padding: 5px;
+    background: #F2F2F2;
+    border: 1px solid #D8D8D8;
+}
+
+.adv-search-view .adv-result-links{
+    background: #F2F2F2;
+    border-bottom: 1px solid #D8D8D8;
+    border-left: 1px solid #D8D8D8;
+    border-right: 1px solid #D8D8D8;
+    padding: 5px;
+}
+
+.adv-report-link {
+    color: #7e8043;
+    text-decoration: none;
+}
+
+.adv-edit-link {
+    color: #7e8043;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.x-quirks #adv-search-view .adv-result {
+    padding-bottom: 3px;
+}
+
+.adv-search-view .adv-result-wrap{
+    margin: 8px 8px 8px 0px;
+    float: left;
+}
+
+.adv-search-view .loading-indicator {
+    font-size:11px;
+    background-image:url('../ui_frameworks/ext-4.0.2a/resources/themes/images/default/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left:20px;
+    margin:10px;
+}
+
+.adv-search-resource-link {
+    color: #7e8043;
+    font-size: 16px;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.search-footer {
+    padding-left: 120px;
+    padding-top: 38px;
+    color:#8c8c8c;
+}
+
+.arches-search-footer-logo     
+{
+    padding-left: 38px;
+    padding-bottom: 15px;
+    background-image:url('../images/Arches-Logo-Only.png');
+    background-repeat:no-repeat;
+    background-position: 0px -3px;
+    background-size: 33px;
+}
+
+.search-footer-logo-title 
+{
+    font-size:18px;
+}
+
+.search-footer-logo-link a 
+{
+    color:#8c8c8c;
+}
+
+.farallon-search-footer-logo 
+{
+    padding-left: 100px;
+    background-image:url('../images/Farallon.jpg');
+    background-repeat:no-repeat;
+    background-position: 0px 3px;
+    height: 45px;
+    padding-top:4px;
+}
+
+.search-footer-nav-links
+{
+    padding-left:25px;
+} 
+
+.search-footer-nav-links .nav-link-container 
+{
+    float:left;
+} 
+
+.search-footer-nav-links .nav-link
+{
+    color: #8c8c8c;
+} 
+
+.gci-logo 
+{
+    cursor: pointer;
+    height: 78px;
+    margin-left: 134px;
+    background-image:url('../images/GCI_logo.png');
+    background-repeat:no-repeat;
+    background-position: right 16px;
+    background-size: 271px;
+    width: 271px;
+}
+
+.wmf-logo 
+{
+    cursor: pointer;
+    height: 78px;
+    background-image:url('../images/WMF_logo.png');
+    background-repeat:no-repeat;
+    background-position: 0px 10px;
+    background-size: 142px;
+    margin-left: 179px;
+    width: 144px;
+}
+
+.adv-search-switcher-link {
+    cursor: pointer;
+    background-image: url(../images/glyphish/mini/mini-gray/40-forward@2x.png);
+    background-position: right 7px;
+    background-size: 24px;
+    padding-right: 32px;
+    background-repeat: no-repeat;
+}
+
+.quick-search-switcher-link {
+    cursor: pointer;
+    background-image: url(../images/glyphish/mini/mini-white/39-back@2x.png);
+    background-position: left 7px;
+    background-size: 24px;
+    padding-left: 32px;
+    background-repeat: no-repeat;
+}
+
+.quick-search-content {
+    background-image: url(../images/AA_stone_henge_image.jpg);
+    background-size: 100%;
+    background-position: 50% -2px;
+    background-repeat: no-repeat;
+}
+
+.adv-search-draw-button {
+    background: #486A96; 
+    opacity: 0.7; 
+    border: 3px solid #EEEEEE;
+}
+
+.adv-search-draw-button.x-btn-over {
+    background: #003C88;
+}
+
+.adv-search-more-link {
+    color: #CCCCCC;
+    font-size: 14px;
+}
+
+.adv-search-more-link.enabled {
+    color: #7e8043;
+    cursor: pointer;
+}
+
+.adv-search-resource-combo {
+    height: 32px !important;
+    width: 24px;
+    background-size: 144px;
+}
+
+.adv-search-resource-combo-over {
+    background-position: -24px 0px;
+}
+
+.adv-search-resource-combo-click {
+    background-position: -48px 0px;
+}
+
+.x-form-trigger-wrap-focus .adv-search-resource-combo {
+    background-position: -72px 0 !important;
+}
+
+.x-form-trigger-wrap-focus .adv-search-resource-combo-over {
+    background-position: -48px 0 !important;
+}
+
+.map-infobar {
+    background-color: #0e3b69;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    padding:5px;
+    color:white;
+}
+
+.map-nav-link {
+    color: #868686;
+    padding: 0px 20px 0px 20px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.map-nav-link.over {
+    color: #545454;
+    background-color: #8a8a8a;
+    cursor: pointer;
+}
+
+.map-nav-link.selected {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    cursor: default !important;
+}
+
+.search-nav-link {
+    color: #2e2e2e;
+    padding: 0px 20px 0px 20px;
+    font-size: 18px;
+}
+
+.search-nav-link.over {
+    color: #545454;
+    background-color: #8a8a8a;
+    cursor: pointer;
+}
+
+.search-nav-link.selected {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    cursor: default !important;
+}
+
+.adv-download-links {
+    height: 34px;
+    margin: 21px 0px 0px 24px;
+    padding: 8px 0px 0px 40px;
+    background-color: #d8d8d8;
+    background-position: 8px 4px;
+    background-size: 25px;
+    font-size: 14px;
+}
+
+.adv-download-links a {
+    color: #2e2e2e;
+    text-decoration: none;
+}
+
+
+/* -------------------------------------
+Concept Viewer
+---------------------------------------*/
+
+.x-tree-icon { 
+    display: none !important; 
+}
+
+.term-item {
+    padding-left: 10px;
+}
+
+.term-item .term-value{
+    color: #2582cb;
+}
+
+.term-item:hover{
+    background-color:rgb(238, 238, 238);
+    cursor: pointer;
+}
+
+.term-item .term-lang{
+    color: #666666;
+}
+
+.term-item.x-item-selected{
+    background-color:rgb(223, 232, 246);
+}
+
+.section-header{
+    padding-bottom: 5px; 
+    font-size:16px; 
+    color: #666666;
+}
+
+.view-body{
+    border: 1px solid lightgray;
+    background-color: rgb(250, 250, 250);
+}
+
+.x-tree-panel .x-scroller {
+    display: none;
+}

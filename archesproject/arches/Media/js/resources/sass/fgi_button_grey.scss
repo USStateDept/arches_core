@@ -1,0 +1,258 @@
+//Button Color Style
+$button_grey_base_color: #616161;  //values: #F4F4F4, #F6F6F6, #FDFDFD, #edeceb, #F2F2F2, #FAFAFA, #F0F0F0, #F5F5F5
+$button_grey_color_over: #CCCCCC;  //values: #FFFFFD
+$button_grey_color_focus: #CCCCCC;
+$button_grey_color_pressed: #AAAAAA;
+$button_grey_color_disabled: #EEEEEE;  //values: #8A8A8A, #B3B3B3
+
+
+//Button Color Gradients
+$button_grey_background_gradient: null; //options are 'glossy','matte', 'matte-reversed', 'recessed', 'glossy-toolbar', $button-default-background-gradient
+$button_grey_background_gradient_over: null;
+$button_grey_background_gradient_focus: null;
+$button_grey_background_gradient_pressed: null;
+$button_grey_background_gradient_disabled: null;
+
+
+//Button border Styles
+$button_grey_border_radius: 0px; 
+$button_grey_border_width: 1px;
+$button_grey_border_color: darken($button_grey_base_color, 10%); //#dbdbdb, #7F7F7F
+$button_grey_border_color_over: darken($button_grey_color_over, 20%);
+$button_grey_border_color_focus: darken($button_grey_color_focus, 20%);
+$button_grey_border_color_pressed: darken($button_grey_color_pressed, 20%);
+$button_grey_border_color_disabled: #afaca9;  //values: #afaca9, darken($button_grey_color_disabled, 50%)
+
+
+//Fonts
+$button_grey_font_family: Arial, Tahoma, Verdana, sans-serif;
+$button_grey_font_family_over: $button_grey_font_family;
+$button_grey_font_family_focus: $button_grey_font_family;
+$button_grey_font_family_pressed: $button_grey_font_family;
+$button_grey_font_family_disabled: $button_grey_font_family;
+
+
+//Font Color and Size Styles
+$button_grey_font_color: #EAEAEA;
+$button_grey_font_color_disabled: #EAEAEA;  //values: 525252
+$button_grey_font_color_mouseover: #404040;
+$button_grey_font_color_pressed: #404040;
+$button_grey_font_size: 14px;
+$button_grey_font_size_over: $button_grey_font_size + 0;
+$button_grey_font_size_pressed: $button_grey_font_size_over;
+$button_grey_font_size_focus: $button_grey_font_size_over;
+
+
+@include extjs-button-ui(
+    'fgi_button_grey-small',
+
+    $border-radius: $button_grey_border-radius,
+    $border-width: $button_grey_border-width,
+ 
+    $border-color: $button_grey_border_color,
+    $border-color-over: $button_grey_border_color_over,
+    $border-color-focus: $button_grey_border_color_focus,
+    $border-color-pressed: $button_grey_border_color_pressed,
+    $border-color-disabled: $button_grey_border_color_disabled,
+ 
+    $padding: 0px,//$button-small-padding,
+    $text-padding: 0px,//$button-small-text-padding,
+ 
+    $background-color: $button_grey_base_color,
+    $background-color-over: $button_grey_color_over,
+    $background-color-focus: $button_grey_color_focus,
+    $background-color-pressed: $button_grey_color_pressed,
+    $background-color-disabled: $button_grey_color_disabled,
+ 
+    $background-gradient: $button_grey_background_gradient,
+    $background-gradient-over: $button_grey_background_gradient_over,
+    $background-gradient-focus: $button_grey_background_gradient_focus,
+    $background-gradient-pressed: $button_grey_background_gradient_pressed,
+    $background-gradient-disabled: $button_grey_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_grey_font_color,
+    $color-over: $button_grey_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_grey_font_color_pressed,
+    $color-disabled: $button_grey_font_color_disabled,
+ 
+    $font-size: $button_grey_font_size,
+    $font-size-over: $button_grey_font_size_over,
+    $font-size-focus: $button_grey_font_size_focus,
+    $font-size-pressed: $button_grey_font_size_pressed,
+    $font-size-disabled: $button_grey_font_size,
+ 
+    $font-weight: $button-small-font-weight,
+    $font-weight-over: 'bold',//$button-small-font-weight-over,
+    $font-weight-focus: 'bold',//$button-small-font-weight-focus,
+    $font-weight-pressed: 'bold',//$button-small-font-weight-pressed,
+    $font-weight-disabled: $button-small-font-weight-disabled,
+ 
+    $font-family: $button_grey_font_family,
+    $font-family-over: $button_grey_font_family_over,
+    $font-family-focus: $button_grey_font_family_focus,
+    $font-family-pressed: $button_grey_font_family_pressed,
+    $font-family-disabled: $button_grey_font_family_disabled,
+ 
+    $icon-size: $button-small-icon-size
+);
+
+@include extjs-button-ui(
+    'fgi_button_grey-medium',
+
+    $border-radius: $button_grey_border-radius,
+    $border-width: $button_grey_border-width,
+ 
+    $border-color: $button_grey_border_color,
+    $border-color-over: $button_grey_border_color_over,
+    $border-color-focus: $button_grey_border_color_focus,
+    $border-color-pressed: $button_grey_border_color_pressed,
+    $border-color-disabled: $button_grey_border_color_disabled,
+ 
+    $padding: $button-medium-padding,
+    $text-padding: $button-medium-text-padding,
+ 
+    $background-color: $button_grey_base_color,
+    $background-color-over: $button_grey_color_over,
+    $background-color-focus: $button_grey_color_focus,
+    $background-color-pressed: $button_grey_color_pressed,
+    $background-color-disabled: $button_grey_color_disabled,
+ 
+    $background-gradient: $button_grey_background_gradient,
+    $background-gradient-over: $button_grey_background_gradient_over,
+    $background-gradient-focus: $button_grey_background_gradient_focus,
+    $background-gradient-pressed: $button_grey_background_gradient_pressed,
+    $background-gradient-disabled: $button_grey_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_grey_font_color,
+    $color-over: $button_grey_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_grey_font_color_pressed,
+    $color-disabled: $button_grey_font_color_disabled,
+ 
+    $font-size: $button_grey_font_size,
+    $font-size-over: $button_grey_font_size_over,
+    $font-size-focus: $button_grey_font_size_focus,
+    $font-size-pressed: $button_grey_font_size_pressed,
+    $font-size-disabled: $button-small-font-size-disabled,
+ 
+    $font-weight: $button-medium-font-weight,
+    $font-weight-over: 'bold',//$button-small-font-weight-over,
+    $font-weight-focus: 'bold',//$button-small-font-weight-focus,
+    $font-weight-pressed: 'bold',//$button-small-font-weight-pressed,
+    $font-weight-disabled: $button-small-font-weight-disabled,
+ 
+    $font-family: $button_grey_font_family,
+    $font-family-over: $button_grey_font_family_over,
+    $font-family-focus: $button_grey_font_family_focus,
+    $font-family-pressed: $button_grey_font_family_pressed,
+    $font-family-disabled: $button_grey_font_family_disabled,
+ 
+    $icon-size: $button-medium-icon-size
+);
+
+@include extjs-button-ui(
+    'fgi_button_grey-large',
+
+    $border-radius: $button_grey_border-radius,
+    $border-width: $button_grey_border-width,
+ 
+    $border-color: $button_grey_border_color,
+    $border-color-over: $button_grey_border_color_over,
+    $border-color-focus: $button_grey_border_color_focus,
+    $border-color-pressed: $button_grey_border_color_pressed,
+    $border-color-disabled: $button_grey_border_color_disabled,
+ 
+    $padding: $button-large-padding,
+    $text-padding: $button-large-text-padding,
+ 
+    $background-color: $button_grey_base_color,
+    $background-color-over: $button_grey_color_over,
+    $background-color-focus: $button_grey_color_focus,
+    $background-color-pressed: $button_grey_color_pressed,
+    $background-color-disabled: $button_grey_color_disabled,
+ 
+    $background-gradient: $button_grey_background_gradient,
+    $background-gradient-over: $button_grey_background_gradient_over,
+    $background-gradient-focus: $button_grey_background_gradient_focus,
+    $background-gradient-pressed: $button_grey_background_gradient_pressed,
+    $background-gradient-disabled: $button_grey_background_gradient_disabled,
+
+    //These are font colors
+    $color: $button_grey_font_color,
+    $color-over: $button_grey_font_color_mouseover,
+    $color-focus: $button-default-color-focus,
+    $color-pressed: $button_grey_font_color_pressed,
+    $color-disabled: $button_grey_font_color_disabled,
+ 
+    $font-size: $button_grey_font_size,
+    $font-size-over: $button_grey_font_size_over,
+    $font-size-focus: $button_grey_font_size_focus,
+    $font-size-pressed: $button_grey_font_size_pressed,
+    $font-size-disabled: $button-small-font-size-disabled,
+ 
+    $font-weight: $button-large-font-weight,
+    $font-weight-over: 'bold',//$button-small-font-weight-over,
+    $font-weight-focus: 'bold',//$button-small-font-weight-focus,
+    $font-weight-pressed: 'bold',//$button-small-font-weight-pressed,
+    $font-weight-disabled: $button-small-font-weight-disabled,
+ 
+    $font-family: $button_grey_font_family,
+    $font-family-over: $button_grey_font_family_over,
+    $font-family-focus: $button_grey_font_family_focus,
+    $font-family-pressed: $button_grey_font_family_pressed,
+    $font-family-disabled: $button_grey_font_family_disabled,
+ 
+    $icon-size: $button-large-icon-size
+);
+
+
+
+//Button Selector on mouseover
+.x-btn-fgi_button_grey-small:hover {
+    //set shadow param's
+    @include box-shadow(0 0 3px rgba(0, 0, 0, .25));
+
+}
+
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_grey-small-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}
+
+//Button Selector on mouseover
+.x-btn-fgi_button_grey-medium:hover {
+    //set shadow param's
+    @include box-shadow(0 0 3px rgba(0, 0, 0, .25));
+
+}
+
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_grey-medium-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}
+
+//Button Selector on mouseover
+.x-btn-fgi_button_grey-large:hover {
+    //set shadow param's
+    @include box-shadow(0 0 3px rgba(0, 0, 0, .25));
+
+}
+
+
+//Button Selector on disabled mouseover
+.x-btn-fgi_button_grey-large-disabled:hover {
+    //set shadow param's
+    @include box-shadow(0 0 0px rgba(0, 0, 0, .25));
+
+}
+
+

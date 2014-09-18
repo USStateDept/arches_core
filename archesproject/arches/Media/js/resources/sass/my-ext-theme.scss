@@ -1,0 +1,70 @@
+// Unless you want to include all components, you must set $include-default to false
+// IF you set this to true, you can also remove lines 10 to 38 of this file
+$include-default: true;
+
+@import 'ext4/default/all';
+
+//Custom Buttons
+@import 'fgi_button_white';
+@import 'fgi_button_grey';
+@import 'fgi_button_orange';
+@import 'fgi_button_blue';
+@import 'fgi_button_white_reverse';
+
+
+//Custom Panels
+@import 'fgi_panel_gray';
+@import 'fgi_panel_gray_transparent';
+@import 'fgi_panel_purple_transparent';
+@import 'fgi_panel_white';
+@import 'fgi_panel_purple';
+
+// This line changes the location of your images when creating UIs to be relative instead of within the ExtJS directory.
+// You MUST set this to true/string value if you are creating new UIs + supporting legacy browsers.
+// This only applies to new UIs. It does not apply to default component images (i.e. when changing $base-color)
+// The value can either be true, in which case the image path will be "../images/"
+// or a string, of where the path is
+$relative-image-path-for-uis: true; // defaults to "../images/" when true
+
+.#{$prefix}scroller-ct { 
+    overflow:hidden; 
+    position:absolute; 
+    margin:0; 
+    padding:0; 
+    border:none; 
+    left:0px; 
+    top:0px; 
+    box-sizing:content-box !important; 
+    -ms-box-sizing:content-box !important; 
+    -moz-box-sizing:content-box !important; 
+    -webkit-box-sizing:content-box !important 
+}  
+
+.#{$prefix}vertical-scroller-present .#{$prefix}grid-body {
+    border-right-width:0px
+}
+
+.#{$prefix}scroller {
+    overflow:hidden
+}
+
+.#{$prefix}scroller-vertical {
+    border:1px solid #99bce8;
+    border-top-color:#c5c5c5
+}
+
+.#{$prefix}scroller-horizontal {
+    border:1px solid #99bce8
+}
+
+.#{$prefix}vertical-scroller-present .#{$prefix}scroller-horizontal {
+    border-right-width:0px
+}
+
+.#{$prefix}scroller-vertical .#{$prefix}scroller-ct {
+    overflow-y:scroll
+}
+
+.#{$prefix}scroller-horizontal .#{$prefix}scroller-ct {
+    overflow-x:scroll
+}  

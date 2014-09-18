@@ -1,0 +1,107 @@
+#Express Installation on Amazon
+
+Express Installation on the Amazon EC2 platform allows you to quickly start and use Arches with its default settings and an example dataset from northern England, courtesy of English Heritage. If your primary goal is to allow several colleagues to test Arches to determine whether it might be a good fit for your project or organization, installing Arches on Amazon is a good choice.
+
+##Before You Start
+Arches runs best with at least 2GB of RAM (but feel free to give it more!), so please consider this when you decide on the size of the Amazon machine that you'll use for Arches.  
+
+Setting up Arches on the Amazon Cloud is pretty simple.  You will have to start an Amazon server using the Arches "amazon machine instance".  Don't worry, its pretty easy!  
+
+Before you start, you may want to familiarize yourself with the Amazon EC2 cloud at [http://aws.amazon.com/ec2/](http://aws.amazon.com/ec2/).  You'll find lots of useful information on what the Amazon cloud can do, as well as the costs for using it.
+
+OK, let's begin!  
+
+###Step 1: Set up an Amazon Account
+Go to [http://aws.amazon.com](http://aws.amazon.com) and then click **Sign Up** and follow the on-screen instructions.  
+
+Part of the sign-up procedure involves receiving a phone call and entering a PIN using the phone keypad.  
+
+
+###Step 2: Get the Arches AMI
+Go to your EC2 Dashboard and click on the blue "Launch Instance" button.
+
+![Amazon EC2 Dashboard](images/Amazon_Step1_launch_instance.png)  
+
+I>## Confirm your region.
+I>You need to be in the **US West(N. California)** region to find the Arches AMI.  You can change the region by selecting from the dropdown on the right hand top of the screen next to your login name.
+
+Next, navigate to the "Community AMIs" tab on the left and type "Arches" into the text box.  Select the "Arches_Seed2" AMI.
+
+![Amazon Choose Arches AMI](images/Amazon_Step2_choose_arches_ami.png) 
+
+
+###Step 3: Select the Arches Server Size
+You'll need to decide what size server you want to run Arches (the "Instance Type" in Amazon lingo).  We recommend either "M1 Medium" or "C1 High CPU Medium".  When you are done, click the "Review and Launch" button. 
+
+![Amazon Select Server Size](images/Amazon_Step3_choose_instance.png)  
+
+
+
+###Step 4: Review the Arches Instance
+Here you can review your selections before actually launching the ami.  When you're done, click on "Launch" button.
+
+I>## The clock has started!
+I>As soon as you press "Launch", Amazon will start billing your account for your usage of the Arches server that you've just launched.  Remember that you're only charged while your Arches server is running.  Using the Amazon console, you can start and stop Arches as often as you wish, thereby minimizing your costs to evaluate Arches.  
+
+![Amazon Launch Instance](images/Amazon_Step4_review_Instance.png)
+
+
+### Step 5: Create Key Pair
+If you haven't ever created a key/pair before then this window will pop up.  If you have then you'll automatically skip to the next step. Enter a name for your key pair, then click the "Create and Download your Key Pair".  
+
+You'll be prompted to select a security group.  You can just select the default group.  More advanced Amazon users may wish to create a custom group. Next, click "Launch Instances"
+
+The next screen should be the Launch Status screen, from here click the "View Instances" button to view your newly created Arches AMI.
+
+![Amazon Key Pair](images/Amazon_Step5_key_pair.png) 
+
+
+### Step 6: Edit the Arches Server
+You'll need to tell Amazon to let users access your brand-new Arches server.  To do this, you'll need to update your security group:
+
++ Highlight your Arches server in the Amazon console, paying special attention to the the security group name (you may have to scroll right), in this example "launch-wizard-1". *Note: After highlighting your Arches instance, you'll see the public URL that you'll use to access Arches.  In this example, the URL is http://ec2-54-193-0-31.us-west-1.compute.amazonaws.com*
++ Click "Security Groups" on the lower left of the screen.
+
+
+![Amazon View Instance](images/Amazon_Step7_edit_instance.png) 
+
+
+###Step 7: Configure HTTP Access on your Server
+
++ Select the security group based on the name noted in the previous step (in this example "launch-wizard-1")
++ Click the "Inbound" tab
++ From the "Create a new rule" dropdown, select "HTTP"
++ Click "Apply Rule Changes"
+
+When you're done, you should see port 80 (HTTP) added to your security settings.  
+
+![Amazon Update Security Group](images/Amazon_Step8_configure_http.png)
+
+
+### Step 8: Log on to Arches
+You're now ready to log on to Arches.  The web address for your instance of Arches has the following form:
+
+    http://<your Amazon URL>/FGI/Arches/#  
+    
+In this example, you would type the following address into your web browser (note: Arches works with Firefox, Chrome, Safari, Opera, and Internet Explorer 10 or higher):
+
+    http://ec2-54-193-0-31.us-west-1.compute.amazonaws.com/FGI/Arches/#  
+    
+If everything's gone right, you should see:  
+
+![Arches Default Screen: Simple Search](images/Arches_Search.png)  
+
+If you want to test adding or editing cultural heritage data in Arches, you'll need to sign in.  Click "Map" in the upper right corner of the screen, then click  
+
+ ![Arches Sign In](images/Arches_login.png)
+ 
+The Username and Password are both "admin" (omit the quotes when entering the username and password).  
+
+For more help in understanding the Arches app, check out the User Guide at [http://Arches User Guide/](http://www.archesproject.com/) to learn how to work with Arches.
+
+W>### Using the test data-set
+W> 
+W> All test data supplied is for experimentation in Arches only. The records 
+W> are not certified for accuracy or completeness.  
+
+Congratulations, you now have a fully functional version of Arches to work with.  

@@ -1,0 +1,41 @@
+﻿.x-btn-pressed.fgi-search-btn .x-btn-text {
+    font-weight:bold; 
+    color:	#000099;
+}
+.fgi-search-btn .x-btn-left{
+    background: none;
+}
+.fgi-search-btn .x-btn-center{
+    background: none;
+}
+.fgi-search-btn .x-btn-right{
+    background: none;
+}
+.fgi-search-box .x-panel-btns-ct
+{
+    padding: 0px;
+}
+.fgi-search-box .x-panel-bc .x-panel-footer
+{
+    padding-bottom: 1px;
+}
+.fgi-search-box .x-panel-mc
+{
+    padding: 0px 0px 0px;
+}
+.fgi-search-box .x-panel-btns-ct table td.x-panel-btn-td
+{
+    padding: 1px;
+}
+.fgi-search-box .x-form-item
+{
+    margin-bottom: 0px;
+}
+.x-btn-text-icon .fgi-google-search
+{
+    background-image: url(../images/icon-google.jpg);
+}
+.search-item
+{
+    border: 1px solid #EEEEEE;
+}
