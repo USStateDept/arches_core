@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\arches-arches-6127ba016596\archesproject\virtualenv\ENV"
+set "VIRTUAL_ENV=C:\inetpub\arches_staging\archesproject\virtualenv\ENV"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"

@@ -1,4 +1,4 @@
-#!C:\arches-arches-6127ba016596\archesproject\virtualenv\ENV\Scripts\python.exe
+#!C:\inetpub\arches_staging\archesproject\virtualenv\ENV\Scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":

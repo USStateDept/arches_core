@@ -1,4 +1,4 @@
-#!C:\arches-arches-6127ba016596\archesproject\virtualenv\ENV\Scripts\python.exe
+#!C:\inetpub\arches_staging\archesproject\virtualenv\ENV\Scripts\python.exe
 # -*- coding: ascii -*-
 # <p>Copyright (c) 2005-2012 Stephen John Machin, Lingfo Pty Ltd</p>
 # <p>This script is part of the xlrd package, which is released under a
