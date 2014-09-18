@@ -130,7 +130,7 @@ INSTALLED_APPS = (
     'archesproject.arches',
     'archesproject.arches.Models',
     'archesproject.build',
-    'lockdown',
+    #'lockdown',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -140,7 +140,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'lockdown.middleware.LockdownMiddleware',
+    #'lockdown.middleware.LockdownMiddleware',
 )
 
 LOCKDOWN_PASSWORDS = ('ecatest', 'admin', 'tester')

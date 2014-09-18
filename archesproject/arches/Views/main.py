@@ -23,6 +23,9 @@ from django.shortcuts import render_to_response
 from django.conf import settings
 from archesproject.arches.Utils.jsfiles import JsFiles
 
+from django.contrib.auth.decorators import login_required
+
+@login_required(login_url='/Arches/User/Login')
 def index(request):
     #lang = request.GET.get('lang') if request.GET.get('lang') != '' and request.GET.get('lang') != None else settings.LANGUAGE_CODE
     debug = True if request.GET.get('debug') != '' and request.GET.get('debug') != None else False

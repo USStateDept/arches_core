@@ -16,38 +16,56 @@ You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 '''
 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.cache import never_cache
 from django.contrib.auth import authenticate, login, logout
 from archesproject.arches.Utils.betterJSONSerializer import JSONSerializer
 from archesproject.arches.Classes.generic_response import GenericResponse
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 
 
 @csrf_exempt
 @never_cache
 def Login(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(username=username, password=password)
-    GR = GenericResponse()
-    GR.returnObj = user
-    if user is not None:
-        if user.is_active:
-            login(request, user)
-            GR.success = True
-            GR.status_code = 0
+    context = RequestContext(request)
+
+
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+
+        if request.POST['noajax']:
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return HttpResponseRedirect('/Arches/')
+
+            return render_to_response('archlogin.html', {"error":"Invalid User Name or Password."}, context)
+
         else:
-            # Return a 'disabled account' error message
-            GR.message = 'account disabled'
+            GR = GenericResponse()
+            GR.returnObj = user
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    GR.success = True
+                    GR.status_code = 0
+                else:
+                    # Return a 'disabled account' error message
+                    GR.message = 'account disabled'
 
-        # don't send the password even if it is hashed
-        user.password = ''
+                # don't send the password even if it is hashed
+                user.password = ''
+            else:
+                # Return an 'invalid login' error message.
+                GR.message = 'invalid login'
+
+            return HttpResponse(JSONSerializer().serialize(GR))
     else:
-        # Return an 'invalid login' error message.
-        GR.message = 'invalid login'
-
-    return HttpResponse(JSONSerializer().serialize(GR))
+        return render_to_response('archlogin.html', {}, context)
 
 
 @never_cache
