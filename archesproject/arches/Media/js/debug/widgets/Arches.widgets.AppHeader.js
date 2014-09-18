@@ -55,7 +55,7 @@ Ext.define('Arches.widgets.AppHeader', {
         this.search = Ext.create('Arches.widgets.Search', {
             style: 'padding-left:85px'
         });
-
+/*
         this.loginWindow = Ext.create('Ext.form.Panel', {
             style: 'background-color: #FFFFFF;border: 1px solid #808080;padding-bottom: 15px;',
             floating: true,
@@ -144,6 +144,7 @@ Ext.define('Arches.widgets.AppHeader', {
                 scope: this
             }
         });
+*/
 
         this.userInfo = Ext.create('Ext.container.Container', {
             style: 'text-align: right;padding: 6px 20px 0px 0px;color: #A0A0A0;',
@@ -159,13 +160,9 @@ Ext.define('Arches.widgets.AppHeader', {
             width: 40,
             iconCls: 'glyph-person',
             iconAlign: 'top',
-            tooltip: 'Sign in',
+            tooltip: 'Sign out',
             handler: function () {
-                if (!this.user) {
-                    this.loginWindow.show();
-                } else {
                     this.signOut();
-                }
             },
             scope: this
         });
@@ -292,6 +289,7 @@ Ext.define('Arches.widgets.AppHeader', {
             Ext.Ajax.request({
                 url: Arches.config.Urls.logout,
                 success: function(response){
+                    window.location.replace("/Arches/User/Login");
                     mask.hide();
                     this.fireEvent('userchanged', null);
                 },
