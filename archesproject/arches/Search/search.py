@@ -81,8 +81,14 @@ class SearchEngine(object):
             already_indexed = False
             count = 1
             entityids = [entity.entityid]
+            tempentityval = ""
+            for e in entity.value:
+                if e.isalnum():
+                    tempentityval += e
+                else:
+                    tempentityval += " "
 
-            result = self.conn.get('term/value/%s' % (entity.value)) #{"_index":"term","_type":"value","_id":"CASTLE MILL","_version":2,"exists":true, "_source" : {"term": "CASTLE MILL"}}
+            result = self.conn.get('term/value/%s' % (tempentityval)) #{"_index":"term","_type":"value","_id":"CASTLE MILL","_version":2,"exists":true, "_source" : {"term": "CASTLE MILL"}}
 
             if result['exists'] == True:
                 entityids = result['_source']['entityids']
@@ -91,7 +97,7 @@ class SearchEngine(object):
             else:
                 entityids = [entity.entityid]
 
-            self.index_data('term', 'value', {'term': entity.value, 'count': len(entityids), 'entityids': entityids}, idfield=None, id=entity.value)
+            self.index_data('term', 'value', {'term': tempentityval, 'count': len(entityids), 'entityids': entityids}, idfield=None, id=tempentityval)
 
     def delete_terms(self, entities):
         """
