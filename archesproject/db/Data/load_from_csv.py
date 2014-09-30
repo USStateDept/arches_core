@@ -60,8 +60,9 @@ class DataLoader(object):
     def load(self, filepath, truncate=True):
         start = time()
         resource_info = open(filepath, 'rb')
-        rows = [line.split("|") for line in resource_info]
-        resourceList = []
+        fullrows = [line.split("|") for line in resource_info]
+        
+        ret = {'successfully_saved':0, 'successfully_indexed':0, 'failed_to_save':[], 'failed_to_index':[]}
         resource_id = ''
         group_id = ''
 
@@ -71,35 +72,47 @@ class DataLoader(object):
                 TRUNCATE data.entities CASCADE;
             """ )
 
-        for row in rows:
-            if rows.index(row) != 0:
-                if (settings.LIMIT_ENTITY_TYPES_TO_LOAD == None or row[1].strip() in settings.LIMIT_ENTITY_TYPES_TO_LOAD):
-                    if row[0].strip() != resource_id:
-                        resourceList.append(Resource(row))
-                        resource_id = row[0].strip()
-                    
-                    if row[4].strip() != '-1' and row[4].strip() != group_id:
-                        resourceList[len(resourceList)-1].groups.append(Group(row))
-                        group_id = row[4].strip()
+        lastchunk = 0
+        for startchunk in range(1000,len(fullrows)+1,1000):
+            print str(startchunk), "out of", str(len(fullrows))
+            resourceList = []
 
-                    if row[4].strip() == group_id:
-                        resourceList[len(resourceList)-1].appendrow(Row(row), group_id=group_id)
-                        #resourceList[len(resourceList)-1].groups[len(resourceList[len(resourceList)-1].groups)-1].rows.append(Row(row))
+            rows = fullrows[lastchunk:startchunk]
 
-                    if row[4].strip() == '-1':
-                        resourceList[len(resourceList)-1].appendrow(Row(row))
-                        #resourceList[len(resourceList)-1].nongroups.append(Row(row))
+            for row in rows:
+                if rows.index(row) != 0:
+                    if (settings.LIMIT_ENTITY_TYPES_TO_LOAD == None or row[1].strip() in settings.LIMIT_ENTITY_TYPES_TO_LOAD):
+                        if row[0].strip() != resource_id:
+                            resourceList.append(Resource(row))
+                            resource_id = row[0].strip()
+                        
+                        if row[4].strip() != '-1' and row[4].strip() != group_id:
+                            resourceList[len(resourceList)-1].groups.append(Group(row))
+                            group_id = row[4].strip()
 
-        elapsed = (time() - start)
-        print 'time to parse csv = %s' % (elapsed)
-        return self.resourceListToEntities(resourceList)
+                        if row[4].strip() == group_id:
+                            resourceList[len(resourceList)-1].appendrow(Row(row), group_id=group_id)
+                            #resourceList[len(resourceList)-1].groups[len(resourceList[len(resourceList)-1].groups)-1].rows.append(Row(row))
 
-    def resourceListToEntities(self, resourceList):
+                        if row[4].strip() == '-1':
+                            resourceList[len(resourceList)-1].appendrow(Row(row))
+                            #resourceList[len(resourceList)-1].nongroups.append(Row(row))
+
+            elapsed = (time() - start)
+            print 'time to parse csv = %s' % (elapsed)
+            ret = self.resourceListToEntities(resourceList, ret)
+        return ret
+
+    def resourceListToEntities(self, resourceList, ret):
+        totalcount = len(resourceList)
+        counter =0
         start = time()
-        ret = {'successfully_saved':0, 'successfully_indexed':0, 'failed_to_save':[], 'failed_to_index':[]}
+        
         schema = None
         curententitytype = None
         for resource in resourceList:
+            counter += 1
+            print str(int((float(counter)/float(totalcount)*100)))
             masterGraph = None
             entityData = []
             if curententitytype != resource.entitytypeid:
@@ -140,8 +153,8 @@ class DataLoader(object):
                 try:
                     masterGraph.index()
                     ret['successfully_indexed'] += 1
-                except:
-                    print "index Failed index!!!!!!!!!!!!!!!!!!!"
+                except Exception, e:
+                    print "index Failed index!!!!!!!!!!!!!!!!!!!", e
                     ret['failed_to_index'].append(resource.resource_id)        
             except:
                 print "Failed to save!!!!!!!!!!!!!!"
