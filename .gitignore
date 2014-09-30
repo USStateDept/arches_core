@@ -1,3 +1,4 @@
 *.pyc
 staticfiles
 uploads
+archesproject/virtualenv/ENV
