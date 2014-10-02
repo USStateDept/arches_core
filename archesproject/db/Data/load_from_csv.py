@@ -6,6 +6,8 @@ from time import time
 from django.conf import settings
 from django.db import connection
 from archesproject.arches.Models.entity import Entity
+from memory_profiler import profile 
+import gc
 
 class Row(object):
     def __init__(self, *args):
@@ -57,53 +59,55 @@ class Resource(object):
            self.nongroups.append(row) 
 
 class DataLoader(object): 
-    def load(self, filepath, truncate=True):
+    #@profile
+    def load(self, rows, truncate=True):
         start = time()
-        resource_info = open(filepath, 'rb')
-        fullrows = [line.split("|") for line in resource_info]
         
-        ret = {'successfully_saved':0, 'successfully_indexed':0, 'failed_to_save':[], 'failed_to_index':[]}
+        #ret = {'successfully_saved':0, 'successfully_indexed':0, 'failed_to_save':[], 'failed_to_index':[]}
         resource_id = ''
         group_id = ''
 
-        if truncate:
-            cursor = connection.cursor()
-            cursor.execute("""
-                TRUNCATE data.entities CASCADE;
-            """ )
+        # if truncate:
+        #     cursor = connection.cursor()
+        #     cursor.execute("""
+        #         TRUNCATE data.entities CASCADE;
+        #     """ )
 
-        lastchunk = 0
-        for startchunk in range(1000,len(fullrows)+1,1000):
-            print str(startchunk), "out of", str(len(fullrows))
-            resourceList = []
+        # lastchunk = 0
+        # for startchunk in range(1000,len(fullrows)+1,1000):
+        #     print str(startchunk), "out of", str(len(fullrows))
+        #     resourceList = []
 
-            rows = fullrows[lastchunk:startchunk]
+        #     rows = fullrows[lastchunk:startchunk]
+        resourceList = []
 
-            for row in rows:
-                if rows.index(row) != 0:
-                    if (settings.LIMIT_ENTITY_TYPES_TO_LOAD == None or row[1].strip() in settings.LIMIT_ENTITY_TYPES_TO_LOAD):
-                        if row[0].strip() != resource_id:
-                            resourceList.append(Resource(row))
-                            resource_id = row[0].strip()
-                        
-                        if row[4].strip() != '-1' and row[4].strip() != group_id:
-                            resourceList[len(resourceList)-1].groups.append(Group(row))
-                            group_id = row[4].strip()
+        for row in rows:
+            if rows.index(row) != 0:
+                if (settings.LIMIT_ENTITY_TYPES_TO_LOAD == None or row[1].strip() in settings.LIMIT_ENTITY_TYPES_TO_LOAD):
+                    if row[0].strip() != resource_id:
+                        resourceList.append(Resource(row))
+                        resource_id = row[0].strip()
+                    
+                    if row[4].strip() != '-1' and row[4].strip() != group_id:
+                        resourceList[len(resourceList)-1].groups.append(Group(row))
+                        group_id = row[4].strip()
 
-                        if row[4].strip() == group_id:
-                            resourceList[len(resourceList)-1].appendrow(Row(row), group_id=group_id)
-                            #resourceList[len(resourceList)-1].groups[len(resourceList[len(resourceList)-1].groups)-1].rows.append(Row(row))
+                    if row[4].strip() == group_id:
+                        resourceList[len(resourceList)-1].appendrow(Row(row), group_id=group_id)
+                        #resourceList[len(resourceList)-1].groups[len(resourceList[len(resourceList)-1].groups)-1].rows.append(Row(row))
 
-                        if row[4].strip() == '-1':
-                            resourceList[len(resourceList)-1].appendrow(Row(row))
-                            #resourceList[len(resourceList)-1].nongroups.append(Row(row))
+                    if row[4].strip() == '-1':
+                        resourceList[len(resourceList)-1].appendrow(Row(row))
+                        #resourceList[len(resourceList)-1].nongroups.append(Row(row))
 
-            elapsed = (time() - start)
-            print 'time to parse csv = %s' % (elapsed)
-            ret = self.resourceListToEntities(resourceList, ret)
-        return ret
+        elapsed = (time() - start)
+        print 'time to parse csv = %s' % (elapsed)
+        self.resourceListToEntities(resourceList)
+        return
 
-    def resourceListToEntities(self, resourceList, ret):
+    #@profile
+    def resourceListToEntities(self, resourceList):
+        ret = {'successfully_saved':0, 'successfully_indexed':0, 'failed_to_save':[], 'failed_to_index':[]}
         totalcount = len(resourceList)
         counter =0
         start = time()
@@ -147,11 +151,13 @@ class DataLoader(object):
                     masterGraph.merge_at(mappingGraph, nodetypetomergeat)
                     
             try:
-                masterGraph.save(username=settings.ETL_USERNAME)
+                tempmaster = masterGraph.save(username=settings.ETL_USERNAME)
+                del tempmaster
                 ret['successfully_saved'] += 1
                 print 'successfully_saved'
                 try:
-                    masterGraph.index()
+                    tempmaster = masterGraph.index()
+                    del tempmaster
                     ret['successfully_indexed'] += 1
                 except Exception, e:
                     print "index Failed index!!!!!!!!!!!!!!!!!!!", e
@@ -160,13 +166,24 @@ class DataLoader(object):
                 print "Failed to save!!!!!!!!!!!!!!"
                 ret['failed_to_save'].append(resource.resource_id)    
                 sys.stdout.write('.')
+
+            del masterGraph
+            # Break the cycle
+            n = gc.collect()
+            print "unreachable before", n
+            print 'Removing references in gc.garbage'
+            del gc.garbage[:]
+
+            # Now the objects are removed
+            print
+            print 'Collecting...'
+            n = gc.collect()
             
-        elapsed = (time() - start)
-        print 'total time to etl = %s' % (elapsed)
-        print 'average time per entity = %s' % (elapsed/len(resourceList))
+            print 'Unreachable objects:', n
+            
+        #elapsed = (time() - start)
         print ret
-        #return masterGraph
-        return ret
+        return
 
 
     def findmergenode(self, graph):

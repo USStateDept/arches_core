@@ -28,6 +28,7 @@ from django.db import transaction
 from archesproject.arches.Models.search import SearchResult, MapFeature
 from archesproject.arches.Search.search_engine_factory import SearchEngineFactory
 from archesproject.arches.Utils.betterJSONSerializer import JSONSerializer, JSONDeserializer
+from memory_profiler import profile 
 
 class Entity(object):
     """ 
@@ -420,6 +421,7 @@ class Entity(object):
             return self.get_parent().get_root()
         return self
 
+    #@profile
     def set_entity_value(self, entitytypeid, value):
         entities = self.find_entities_by_type_id(entitytypeid)
         if len(entities) > 0:
@@ -429,7 +431,9 @@ class Entity(object):
             schema = Entity.get_mapping_schema(self.entitytypeid)
             entity = Entity()
             entity.create_from_mapping(self.entitytypeid, schema[entitytypeid]['steps'], entitytypeid, value)
+            del schema
             self.merge(entity)
+            del entity
 
     def create_from_mapping(self, entitytypeid, mappingsteps, leafentitytypeid, leafvalue):
         currentEntity = self
