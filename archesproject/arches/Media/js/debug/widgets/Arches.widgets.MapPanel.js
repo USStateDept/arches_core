@@ -83,7 +83,7 @@ OpenLayers.ArchesResourceStyle = OpenLayers.Class(OpenLayers.Style, {
             strokeColor: color,
             fillColor: color,
             strokeOpacity: "${getStrokeOpacity}",
-            fillOpacity: "${getFillOpacity}",
+            fillOpacity: ".25",
             pointRadius: "${getRadius}",
             strokeWidth: "${getStrokeWidth}",
             labelOutlineWidth: 1,
